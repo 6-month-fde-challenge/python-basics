@@ -1,0 +1,134 @@
+Inventory Management System starting...
+
+==================================================
+           INVENTORY MANAGEMENT
+==================================================
+   Products on record : 4
+   --------------------------------------------
+   1. Add product
+   2. Display all products
+   3. Search product
+   4. Update quantity
+   5. Calculate total inventory value
+   6. Exit
+==================================================
+   Choose an option (1-6) : 
+   CURRENT INVENTORY
+   --------------------------------------------------------
+   #   PRODUCT                  PRICE   QTY         VALUE
+   --------------------------------------------------------
+   1   Laptop                55000.00     4     220000.00
+   2   Mouse                   700.00    20      14000.00
+   3   Keyboard               1500.00    15      22500.00
+   4   Monitor               12000.00     6      72000.00
+   --------------------------------------------------------
+   4 product(s)                       TOTAL: Rs.328500.00
+
+==================================================
+           INVENTORY MANAGEMENT
+==================================================
+   Products on record : 4
+   --------------------------------------------
+   1. Add product
+   2. Display all products
+   3. Search product
+   4. Update quantity
+   5. Calculate total inventory value
+   6. Exit
+==================================================
+   Choose an option (1-6) :    Product name :    Price        : Rs.   Quantity     : 
+   SUCCESS: 'Printer' added.
+   3 unit(s) at Rs.8500.00 = Rs.25500.00
+
+==================================================
+           INVENTORY MANAGEMENT
+==================================================
+   Products on record : 5
+   --------------------------------------------
+   1. Add product
+   2. Display all products
+   3. Search product
+   4. Update quantity
+   5. Calculate total inventory value
+   6. Exit
+==================================================
+   Choose an option (1-6) :    Search for : 
+   Found 2 match(es) for 'mo':
+   --------------------------------------------------
+   Mouse              Rs.    700.00 x 20   = Rs.  14000.00   IN STOCK
+   Monitor            Rs.  12000.00 x 6    = Rs.  72000.00   IN STOCK
+   --------------------------------------------------
+
+==================================================
+           INVENTORY MANAGEMENT
+==================================================
+   Products on record : 5
+   --------------------------------------------
+   1. Add product
+   2. Display all products
+   3. Search product
+   4. Update quantity
+   5. Calculate total inventory value
+   6. Exit
+==================================================
+   Choose an option (1-6) :    Product to update :    Current quantity of Mouse : 20
+   New quantity      : 
+   SUCCESS: Mouse updated from 20 to 25.
+   New line value: Rs.17500.00
+
+==================================================
+           INVENTORY MANAGEMENT
+==================================================
+   Products on record : 5
+   --------------------------------------------
+   1. Add product
+   2. Display all products
+   3. Search product
+   4. Update quantity
+   5. Calculate total inventory value
+   6. Exit
+==================================================
+   Choose an option (1-6) : 
+   INVENTORY VALUATION
+   ----------------------------------------------
+   Laptop               55000.00 x 4    = Rs.   220000.00
+   Mouse                  700.00 x 25   = Rs.    17500.00
+   Keyboard              1500.00 x 15   = Rs.    22500.00
+   Monitor              12000.00 x 6    = Rs.    72000.00
+   Printer               8500.00 x 3    = Rs.    25500.00
+   ----------------------------------------------
+   TOTAL INVENTORY VALUE : Rs.357500.00
+
+==================================================
+           INVENTORY MANAGEMENT
+==================================================
+   Products on record : 5
+   --------------------------------------------
+   1. Add product
+   2. Display all products
+   3. Search product
+   4. Update quantity
+   5. Calculate total inventory value
+   6. Exit
+==================================================
+   Choose an option (1-6) : 
+   INVALID OPTION: '9'. Please choose 1 to 6.
+
+==================================================
+           INVENTORY MANAGEMENT
+==================================================
+   Products on record : 5
+   --------------------------------------------
+   1. Add product
+   2. Display all products
+   3. Search product
+   4. Update quantity
+   5. Calculate total inventory value
+   6. Exit
+==================================================
+   Choose an option (1-6) : 
+==================================================
+   Products on record   : 5
+   Total inventory value: Rs.357500.00
+   Goodbye!
+==================================================

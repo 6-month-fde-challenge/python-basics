@@ -1,0 +1,167 @@
+Welcome to the Python Utility Application.
+
+==================================================
+           PYTHON UTILITY APPLICATION
+==================================================
+   1. Calculator
+   2. Palindrome Checker
+   3. Prime Checker
+   4. Factorial Calculator
+   5. Number Analyzer
+   6. Password Strength Checker
+   7. Vowel & Character Counter
+   8. Multiplication Table
+   9. Exit
+==================================================
+   Choose a utility (1-9) : 
+   --- PRIME CHECKER ---
+   Enter a whole number : 
+   RESULT: 97 is a PRIME number.
+   It has exactly two divisors: 1 and itself.
+
+==================================================
+           PYTHON UTILITY APPLICATION
+==================================================
+   1. Calculator
+   2. Palindrome Checker
+   3. Prime Checker
+   4. Factorial Calculator
+   5. Number Analyzer
+   6. Password Strength Checker
+   7. Vowel & Character Counter
+   8. Multiplication Table
+   9. Exit
+==================================================
+   Choose a utility (1-9) : 
+   --- FACTORIAL CALCULATOR ---
+   Enter a whole number : 
+   RESULT: 6! = 720
+   Working: 1 x 2 x 3 x 4 x 5 x 6 = 720
+
+==================================================
+           PYTHON UTILITY APPLICATION
+==================================================
+   1. Calculator
+   2. Palindrome Checker
+   3. Prime Checker
+   4. Factorial Calculator
+   5. Number Analyzer
+   6. Password Strength Checker
+   7. Vowel & Character Counter
+   8. Multiplication Table
+   9. Exit
+==================================================
+   Choose a utility (1-9) : 
+   --- PALINDROME CHECKER ---
+   Enter a word or sentence : 
+   Cleaned text : 'madam'
+   RESULT: 'madam' IS a palindrome.
+
+==================================================
+           PYTHON UTILITY APPLICATION
+==================================================
+   1. Calculator
+   2. Palindrome Checker
+   3. Prime Checker
+   4. Factorial Calculator
+   5. Number Analyzer
+   6. Password Strength Checker
+   7. Vowel & Character Counter
+   8. Multiplication Table
+   9. Exit
+==================================================
+   Choose a utility (1-9) : 
+   --- VOWEL AND CHARACTER COUNTER ---
+   Enter some text : 
+   Total characters : 18
+   Vowels           : 4
+   Consonants       : 13
+   Digits           : 0
+   Spaces           : 1
+   Other characters : 0
+
+==================================================
+           PYTHON UTILITY APPLICATION
+==================================================
+   1. Calculator
+   2. Palindrome Checker
+   3. Prime Checker
+   4. Factorial Calculator
+   5. Number Analyzer
+   6. Password Strength Checker
+   7. Vowel & Character Counter
+   8. Multiplication Table
+   9. Exit
+==================================================
+   Choose a utility (1-9) : 
+   --- MULTIPLICATION TABLE ---
+   Table of        :    Up to (e.g. 10) : 
+   7 x   1 = 7
+   7 x   2 = 14
+   7 x   3 = 21
+   7 x   4 = 28
+   7 x   5 = 35
+   7 x   6 = 42
+   7 x   7 = 49
+   7 x   8 = 56
+   7 x   9 = 63
+   7 x  10 = 70
+
+==================================================
+           PYTHON UTILITY APPLICATION
+==================================================
+   1. Calculator
+   2. Palindrome Checker
+   3. Prime Checker
+   4. Factorial Calculator
+   5. Number Analyzer
+   6. Password Strength Checker
+   7. Vowel & Character Counter
+   8. Multiplication Table
+   9. Exit
+==================================================
+   Choose a utility (1-9) : 
+   --- PASSWORD STRENGTH CHECKER ---
+   Enter a password : 
+   [PASS]  At least 8 characters
+   [PASS]  Uppercase letter
+   [PASS]  Lowercase letter
+   [PASS]  Number
+   [PASS]  Special character
+   SCORE    : 5 / 5
+   STRENGTH : VERY STRONG
+
+==================================================
+           PYTHON UTILITY APPLICATION
+==================================================
+   1. Calculator
+   2. Palindrome Checker
+   3. Prime Checker
+   4. Factorial Calculator
+   5. Number Analyzer
+   6. Password Strength Checker
+   7. Vowel & Character Counter
+   8. Multiplication Table
+   9. Exit
+==================================================
+   Choose a utility (1-9) : 
+   INVALID OPTION: '99'. Please choose 1 to 9.
+
+==================================================
+           PYTHON UTILITY APPLICATION
+==================================================
+   1. Calculator
+   2. Palindrome Checker
+   3. Prime Checker
+   4. Factorial Calculator
+   5. Number Analyzer
+   6. Password Strength Checker
+   7. Vowel & Character Counter
+   8. Multiplication Table
+   9. Exit
+==================================================
+   Choose a utility (1-9) : 
+==================================================
+   Utilities used this session : 6
+   Thank you for using the utility application. Goodbye!
+==================================================

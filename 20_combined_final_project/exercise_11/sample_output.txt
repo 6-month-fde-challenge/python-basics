@@ -1,0 +1,45 @@
+================================================
+           MINI AUTHENTICATION SYSTEM
+================================================
+   Valid accounts for this demo:
+      admin
+      rahul
+   (Password for admin is 'python123')
+
+================================================
+                 LOGIN
+================================================
+   You have 3 attempts.
+
+   Username :    Password :    Incorrect username or password. 2 attempt(s) remaining.
+
+   Username :    Password : 
+   LOGIN SUCCESSFUL on attempt 2.
+
+================================================
+        DASHBOARD - logged in as admin
+================================================
+   1. View profile
+   2. Change password (demo)
+   3. Logout
+   4. Exit application
+================================================
+   Choose an option (1-4) : 
+   USER PROFILE
+   --------------------------------
+   Username : admin
+   Role     : Administrator
+   Status   : Active session
+
+================================================
+        DASHBOARD - logged in as admin
+================================================
+   1. View profile
+   2. Change password (demo)
+   3. Logout
+   4. Exit application
+================================================
+   Choose an option (1-4) : 
+   admin has been logged out.
+   Log in as another user? (y/n) : 
+   Application closed. Goodbye!

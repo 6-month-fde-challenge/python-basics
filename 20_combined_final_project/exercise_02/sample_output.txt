@@ -1,0 +1,127 @@
+Welcome to Python Bank.
+
+==============================================
+            PYTHON BANK
+==============================================
+   Balance : Rs.5000.00
+   ----------------------------------------
+   1. Check balance
+   2. Deposit
+   3. Withdraw
+   4. Transaction history
+   5. Exit
+==============================================
+   Choose an option (1-5) : 
+   Your available balance is Rs.5000.00
+
+==============================================
+            PYTHON BANK
+==============================================
+   Balance : Rs.5000.00
+   ----------------------------------------
+   1. Check balance
+   2. Deposit
+   3. Withdraw
+   4. Transaction history
+   5. Exit
+==============================================
+   Choose an option (1-5) :    Enter amount to deposit : Rs.
+   SUCCESS: Rs.2000.00 deposited.
+   New balance: Rs.7000.00
+
+==============================================
+            PYTHON BANK
+==============================================
+   Balance : Rs.7000.00
+   ----------------------------------------
+   1. Check balance
+   2. Deposit
+   3. Withdraw
+   4. Transaction history
+   5. Exit
+==============================================
+   Choose an option (1-5) :    Enter amount to withdraw : Rs.
+   SUCCESS: Rs.1500.00 withdrawn.
+   Remaining balance: Rs.5500.00
+
+==============================================
+            PYTHON BANK
+==============================================
+   Balance : Rs.5500.00
+   ----------------------------------------
+   1. Check balance
+   2. Deposit
+   3. Withdraw
+   4. Transaction history
+   5. Exit
+==============================================
+   Choose an option (1-5) :    Enter amount to withdraw : Rs.
+   DECLINED: insufficient funds.
+   Requested Rs.99999.00, available Rs.5500.00
+   Short by Rs.94499.00
+
+==============================================
+            PYTHON BANK
+==============================================
+   Balance : Rs.5500.00
+   ----------------------------------------
+   1. Check balance
+   2. Deposit
+   3. Withdraw
+   4. Transaction history
+   5. Exit
+==============================================
+   Choose an option (1-5) :    Enter amount to deposit : Rs.      ERROR: 'abc' is not a valid number.
+
+==============================================
+            PYTHON BANK
+==============================================
+   Balance : Rs.5500.00
+   ----------------------------------------
+   1. Check balance
+   2. Deposit
+   3. Withdraw
+   4. Transaction history
+   5. Exit
+==============================================
+   Choose an option (1-5) : 
+   TRANSACTION HISTORY
+   --------------------------------------------
+   #   TYPE                AMOUNT       BALANCE
+   --------------------------------------------
+   1   Deposit        +Rs.2000.00    Rs.7000.00
+   2   Withdrawal     -Rs.1500.00    Rs.5500.00
+   --------------------------------------------
+   2 transaction(s)
+
+==============================================
+            PYTHON BANK
+==============================================
+   Balance : Rs.5500.00
+   ----------------------------------------
+   1. Check balance
+   2. Deposit
+   3. Withdraw
+   4. Transaction history
+   5. Exit
+==============================================
+   Choose an option (1-5) : 
+   INVALID OPTION: '7'. Please choose 1 to 5.
+
+==============================================
+            PYTHON BANK
+==============================================
+   Balance : Rs.5500.00
+   ----------------------------------------
+   1. Check balance
+   2. Deposit
+   3. Withdraw
+   4. Transaction history
+   5. Exit
+==============================================
+   Choose an option (1-5) : 
+==============================================
+   Final balance : Rs.5500.00
+   Transactions  : 2
+   Thank you for banking with us. Goodbye!
+==============================================

@@ -1,0 +1,86 @@
+========================================================
+              PYTHON QUIZ APPLICATION
+========================================================
+   5 questions. One mark each. Answer with a, b, c or d.
+
+========================================================
+   QUESTION 1 OF 5
+========================================================
+   Which keyword is used to define a function in Python?
+
+      a) func
+      b) def
+      c) function
+      d) define
+
+   Your answer (a/b/c/d) :    CORRECT. Score is now 1/1.
+
+========================================================
+   QUESTION 2 OF 5
+========================================================
+   What is the data type of the value  5 / 2  in Python 3?
+
+      a) int
+      b) str
+      c) float
+      d) bool
+
+   Your answer (a/b/c/d) :    CORRECT. Score is now 2/2.
+
+========================================================
+   QUESTION 3 OF 5
+========================================================
+   Which of these collections does NOT allow duplicate values?
+
+      a) list
+      b) tuple
+      c) set
+      d) string
+
+   Your answer (a/b/c/d) :    CORRECT. Score is now 3/3.
+
+========================================================
+   QUESTION 4 OF 5
+========================================================
+   What does the `break` statement do inside a loop?
+
+      a) Skips the current pass only
+      b) Ends the entire loop immediately
+      c) Restarts the loop from the beginning
+      d) Pauses the loop
+
+   Your answer (a/b/c/d) :    CORRECT. Score is now 4/4.
+
+========================================================
+   QUESTION 5 OF 5
+========================================================
+   What will  len('Python')  return?
+
+      a) 5
+      b) 6
+      c) 7
+      d) Error
+
+   Your answer (a/b/c/d) :    WRONG. The answer was b) 6
+   Score is still 4/5.
+
+========================================================
+                  QUIZ COMPLETE
+========================================================
+   Questions answered : 5
+   Correct answers    : 4
+   Wrong answers      : 1
+   --------------------------------------------------
+   FINAL SCORE  : 4 / 5
+   PERCENTAGE   : 80.00%
+   GRADE        : B
+   --------------------------------------------------
+   A solid pass.
+
+   REVIEW OF WRONG ANSWERS
+   --------------------------------------------------
+   Q: What will  len('Python')  return?
+      Correct answer: b) 6
+      P-y-t-h-o-n is six characters, so len() returns 6.
+
+========================================================

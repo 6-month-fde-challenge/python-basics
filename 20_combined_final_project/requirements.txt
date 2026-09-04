@@ -1,0 +1,14 @@
+# Combined Final Project - Loops, While Loops and Functions
+#
+# This project has NO external dependencies.
+#
+# Every program uses only the Python standard library - in fact only
+# built-in functions and statements. Nothing needs to be installed with pip.
+#
+# Requirement:
+#     Python 3.6 or newer  (f-strings are used throughout)
+#
+# Verified on Python 3.12
+#
+# To run any program:
+#     python exercise_01/main.py

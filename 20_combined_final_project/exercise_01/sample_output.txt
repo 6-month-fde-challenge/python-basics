@@ -1,0 +1,26 @@
+==============================================
+      STUDENT RESULT MANAGEMENT SYSTEM
+==============================================
+   Subjects: 5   Max per subject: 100   Pass mark: 35
+
+   Student name : 
+   Enter the marks:
+   Mathematics       :    Physics           :    Chemistry         :    English           :    Computer Science  : 
+==============================================
+            STUDENT RESULT CARD
+==============================================
+   Name : Rahul
+   ----------------------------------------
+   SUBJECT                MARKS    STATUS
+   ----------------------------------------
+   Mathematics               88      Pass
+   Physics                   92      Pass
+   Chemistry                 76      Pass
+   English                   65      Pass
+   Computer Science          95      Pass
+   ----------------------------------------
+   TOTAL                    416 / 500
+   PERCENTAGE            83.20%
+   GRADE                      A
+   RESULT                  PASS
+==============================================

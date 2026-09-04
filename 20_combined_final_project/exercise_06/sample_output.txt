@@ -1,0 +1,53 @@
+
+==========================================================
+               EMPLOYEE SALARY ANALYZER
+==========================================================
+   NAME      DEPARTMENT              SALARY
+   --------------------------------------------
+   Rahul     Engineering            620,000
+   Priya     Engineering            750,000
+   Aman      Marketing              410,000
+   Sneha     Design                 380,000
+   Kavya     Management             980,000
+   Rohit     Support                240,000
+   Meera     Engineering            540,000
+   Arjun     Marketing              200,000
+   --------------------------------------------
+
+   SUMMARY
+   --------------------------------------------------
+   Employees             : 8
+   Total payroll         : Rs.4,120,000
+   Average salary        : Rs.515,000.00
+   Highest salary        : Rs.980,000  (Kavya, Management)
+   Lowest salary         : Rs.200,000  (Arjun, Marketing)
+   Salary range          : Rs.780,000
+
+   EMPLOYEES EARNING ABOVE THE AVERAGE (Rs.515,000.00)
+   --------------------------------------------------
+   Rahul     Rs.   620,000   (Rs.105,000.00 above average)
+   Priya     Rs.   750,000   (Rs.235,000.00 above average)
+   Kavya     Rs.   980,000   (Rs.465,000.00 above average)
+   Meera     Rs.   540,000   (Rs.25,000.00 above average)
+   4 of 8 employees are above the average.
+   4 of 8 are at or below it.
+
+   Note: the average is not the midpoint. A few large salaries pull
+   it upward, so fewer than half the staff can be above it.
+
+   SALARY BILL BY DEPARTMENT
+   --------------------------------------------------
+   Engineering     Rs.   1,910,000   ( 46.4% of payroll)
+   Marketing       Rs.     610,000   ( 14.8% of payroll)
+   Design          Rs.     380,000   (  9.2% of payroll)
+   Management      Rs.     980,000   ( 23.8% of payroll)
+   Support         Rs.     240,000   (  5.8% of payroll)
+==========================================================
+
+   Edge case - an empty payroll:
+
+==========================================================
+               EMPLOYEE SALARY ANALYZER
+==========================================================
+   No employees on record - nothing to analyse.
+==========================================================

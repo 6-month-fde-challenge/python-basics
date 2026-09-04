@@ -1,0 +1,139 @@
+======================================================
+            PASSWORD STRENGTH CHECKER
+======================================================
+
+======================================================
+   PASSWORD : python
+   LENGTH   : 6 characters
+======================================================
+   [FAIL]  At least 8 characters
+   [FAIL]  Contains an uppercase letter
+   [PASS]  Contains a lowercase letter
+   [FAIL]  Contains a number
+   [FAIL]  Contains a special character
+   ------------------------------------------------
+   SCORE    : 1 / 5   [#....]
+   STRENGTH : VERY WEAK
+   RESULT   : Rejected - improve the following:
+      - Add 2 more character(s).
+      - Add a capital letter, for example A or M.
+      - Add a digit, for example 7.
+      - Add a special character, for example @ or #.
+======================================================
+
+======================================================
+   PASSWORD : PYTHON123
+   LENGTH   : 9 characters
+======================================================
+   [PASS]  At least 8 characters
+   [PASS]  Contains an uppercase letter
+   [FAIL]  Contains a lowercase letter
+   [PASS]  Contains a number
+   [FAIL]  Contains a special character
+   ------------------------------------------------
+   SCORE    : 3 / 5   [###..]
+   STRENGTH : MEDIUM
+   RESULT   : Rejected - improve the following:
+      - Add a small letter, for example a or m.
+      - Add a special character, for example @ or #.
+======================================================
+
+======================================================
+   PASSWORD : Python12
+   LENGTH   : 8 characters
+======================================================
+   [PASS]  At least 8 characters
+   [PASS]  Contains an uppercase letter
+   [PASS]  Contains a lowercase letter
+   [PASS]  Contains a number
+   [FAIL]  Contains a special character
+   ------------------------------------------------
+   SCORE    : 4 / 5   [####.]
+   STRENGTH : STRONG
+   RESULT   : Rejected - improve the following:
+      - Add a special character, for example @ or #.
+======================================================
+
+======================================================
+   PASSWORD : Python123
+   LENGTH   : 9 characters
+======================================================
+   [PASS]  At least 8 characters
+   [PASS]  Contains an uppercase letter
+   [PASS]  Contains a lowercase letter
+   [PASS]  Contains a number
+   [FAIL]  Contains a special character
+   ------------------------------------------------
+   SCORE    : 4 / 5   [####.]
+   STRENGTH : STRONG
+   RESULT   : Rejected - improve the following:
+      - Add a special character, for example @ or #.
+======================================================
+
+======================================================
+   PASSWORD : Python@123
+   LENGTH   : 10 characters
+======================================================
+   [PASS]  At least 8 characters
+   [PASS]  Contains an uppercase letter
+   [PASS]  Contains a lowercase letter
+   [PASS]  Contains a number
+   [PASS]  Contains a special character
+   ------------------------------------------------
+   SCORE    : 5 / 5   [#####]
+   STRENGTH : VERY STRONG
+   RESULT   : Accepted - this password meets every rule.
+======================================================
+
+======================================================
+   PASSWORD : P@1a
+   LENGTH   : 4 characters
+======================================================
+   [FAIL]  At least 8 characters
+   [PASS]  Contains an uppercase letter
+   [PASS]  Contains a lowercase letter
+   [PASS]  Contains a number
+   [PASS]  Contains a special character
+   ------------------------------------------------
+   SCORE    : 4 / 5   [####.]
+   STRENGTH : STRONG
+   RESULT   : Rejected - improve the following:
+      - Add 4 more character(s).
+======================================================
+
+======================================================
+   PASSWORD : correct horse battery staple
+   LENGTH   : 28 characters
+======================================================
+   [PASS]  At least 8 characters
+   [FAIL]  Contains an uppercase letter
+   [PASS]  Contains a lowercase letter
+   [FAIL]  Contains a number
+   [FAIL]  Contains a special character
+   ------------------------------------------------
+   SCORE    : 2 / 5   [##...]
+   STRENGTH : WEAK
+   RESULT   : Rejected - improve the following:
+      - Add a capital letter, for example A or M.
+      - Add a digit, for example 7.
+      - Add a special character, for example @ or #.
+======================================================
+
+======================================================
+            TEST YOUR OWN PASSWORD
+======================================================
+   Enter a password to check : 
+======================================================
+   PASSWORD : MyP@ssw0rd
+   LENGTH   : 10 characters
+======================================================
+   [PASS]  At least 8 characters
+   [PASS]  Contains an uppercase letter
+   [PASS]  Contains a lowercase letter
+   [PASS]  Contains a number
+   [PASS]  Contains a special character
+   ------------------------------------------------
+   SCORE    : 5 / 5   [#####]
+   STRENGTH : VERY STRONG
+   RESULT   : Accepted - this password meets every rule.
+======================================================

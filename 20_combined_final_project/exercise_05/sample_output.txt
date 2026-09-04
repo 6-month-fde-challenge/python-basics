@@ -1,0 +1,126 @@
+====================================================
+              NUMBER ANALYSIS TOOL
+====================================================
+   min(), max() and sum() are not used - every value is
+   calculated with a loop, in a single pass over the data.
+
+====================================================
+              NUMBER ANALYSIS REPORT
+====================================================
+   Input : [12, -5, 8, 0, 33, -17, 4, 25, -8, 41]
+   Count : 10 numbers
+   ----------------------------------------------
+   Largest number          : 41
+   Smallest number         : -17
+   Range (largest-smallest): 58
+   Total                   : 93
+   Average                 : 9.30
+   ----------------------------------------------
+   Even numbers            : 5
+   Odd numbers             : 5
+   ----------------------------------------------
+   Positive numbers        : 6
+   Negative numbers        : 3
+   Zeros                   : 1
+   ----------------------------------------------
+   Check: even + odd = 10, positive + negative + zero = 10, count = 10
+====================================================
+
+====================================================
+              NUMBER ANALYSIS REPORT
+====================================================
+   Input : [10, 20, 30, 40, 50]
+   Count : 5 numbers
+   ----------------------------------------------
+   Largest number          : 50
+   Smallest number         : 10
+   Range (largest-smallest): 40
+   Total                   : 150
+   Average                 : 30.00
+   ----------------------------------------------
+   Even numbers            : 5
+   Odd numbers             : 0
+   ----------------------------------------------
+   Positive numbers        : 5
+   Negative numbers        : 0
+   Zeros                   : 0
+   ----------------------------------------------
+   Check: even + odd = 5, positive + negative + zero = 5, count = 5
+====================================================
+
+====================================================
+              NUMBER ANALYSIS REPORT
+====================================================
+   Input : [-5, -12, -3, -40, -8]
+   Count : 5 numbers
+   ----------------------------------------------
+   Largest number          : -3
+   Smallest number         : -40
+   Range (largest-smallest): 37
+   Total                   : -68
+   Average                 : -13.60
+   ----------------------------------------------
+   Even numbers            : 3
+   Odd numbers             : 2
+   ----------------------------------------------
+   Positive numbers        : 0
+   Negative numbers        : 5
+   Zeros                   : 0
+   ----------------------------------------------
+   Check: even + odd = 5, positive + negative + zero = 5, count = 5
+====================================================
+
+====================================================
+              NUMBER ANALYSIS REPORT
+====================================================
+   Input : [7]
+   Count : 1 numbers
+   ----------------------------------------------
+   Largest number          : 7
+   Smallest number         : 7
+   Range (largest-smallest): 0
+   Total                   : 7
+   Average                 : 7.00
+   ----------------------------------------------
+   Even numbers            : 0
+   Odd numbers             : 1
+   ----------------------------------------------
+   Positive numbers        : 1
+   Negative numbers        : 0
+   Zeros                   : 0
+   ----------------------------------------------
+   Check: even + odd = 1, positive + negative + zero = 1, count = 1
+====================================================
+
+====================================================
+              NUMBER ANALYSIS REPORT
+====================================================
+   Input : []
+   The list is empty - there is nothing to analyse.
+====================================================
+
+====================================================
+              ANALYSE YOUR OWN NUMBERS
+====================================================
+   Enter numbers separated by spaces (or press Enter to skip) : 
+====================================================
+              NUMBER ANALYSIS REPORT
+====================================================
+   Input : [5, -3, 12, 0, 7]
+   Count : 5 numbers
+   ----------------------------------------------
+   Largest number          : 12
+   Smallest number         : -3
+   Range (largest-smallest): 15
+   Total                   : 21
+   Average                 : 4.20
+   ----------------------------------------------
+   Even numbers            : 2
+   Odd numbers             : 3
+   ----------------------------------------------
+   Positive numbers        : 3
+   Negative numbers        : 1
+   Zeros                   : 1
+   ----------------------------------------------
+   Check: even + odd = 5, positive + negative + zero = 5, count = 5
+====================================================
