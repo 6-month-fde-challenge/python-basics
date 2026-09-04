@@ -11,7 +11,7 @@ before submitting - the code will run exactly the same either way.
 # 1. Create the variables
 # ---------------------------------------------------------------------------
 
-name = "Veerandra P V"          # string  -> my full name
+name = "Veerandra PV"          # string  -> my full name
 age = 24                        # integer -> my age in years
 city = "Hyderabad"              # string  -> the city I live in
 company = "Virtusa"             # string  -> my college / company name
