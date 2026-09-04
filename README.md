@@ -93,3 +93,10 @@ peeling with `% 10` and `// 10`, divisor testing up to the square root
 **Practice** - input validation with `try/except`, guarding edge cases (empty lists,
 zero divisors, `0!`, the number 1 in a prime test), menu-driven applications, and
 docstrings on every function from exercise 18 onward.
+
+---
+
+## About this module
+
+This is **module 01** of the [6-month FDE challenge](https://github.com/6-month-fde-challenge).
+Each module of the challenge lives in its own repository under that organisation.
