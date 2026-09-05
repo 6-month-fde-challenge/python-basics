@@ -1,4 +1,4 @@
-# Exercise 20 - Combined Final Project
+# Exercise 21 - Combined Final Project
 
 Loops, while loops and functions brought together into twelve practical
 mini-programs.
@@ -22,7 +22,7 @@ assumed away.
 ## Project structure
 
 ```
-20_combined_final_project/
+21_combined_final_project/
 ├── README.md
 ├── requirements.txt
 ├── exercise_01/   Student Result Management System
@@ -57,7 +57,7 @@ python exercise_01/main.py
 or from the repo root:
 
 ```bash
-python .\01_python_basics\20_combined_final_project\exercise_01\main.py
+python .\01_python_basics\21_combined_final_project\exercise_01\main.py
 ```
 
 or from inside the exercise folder:

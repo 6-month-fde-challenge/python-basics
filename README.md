@@ -15,7 +15,7 @@ No external packages are needed anywhere in this module.
 
 ---
 
-## Part 1 - Data types and data structures (exercises 01-13)
+## Part 1 - Data types and data structures (exercises 01-14)
 
 Single-file exercises. Several of these deliberately forbid loops, so every value is
 reached by direct indexing or key access.
@@ -35,40 +35,39 @@ reached by direct indexing or key access.
 | 11 | [11_product_dictionary](11_product_dictionary/) | Modelling an object as a dict |
 | 12 | [12_student_profile_dict](12_student_profile_dict/) | The 7 dictionary methods |
 | 13 | [13_ecommerce_dataset](13_ecommerce_dataset/) | List of dictionaries |
-| 21 | [21_student_marks_list](21_student_marks_list/) | 15 list operations in sequence |
+| 14 | [14_student_marks_list](14_student_marks_list/) | 15 list operations in sequence |
 
-## Part 2 - Loops (exercises 14-16, 19)
+## Part 2 - Loops (exercises 15-18)
 
 Multi-program sets. Each has its own README with per-question notes.
 
 | # | Folder | Topic |
 |---|--------|-------|
-| 16 | [16_for_loop_fundamentals](16_for_loop_fundamentals/) | `for` fundamentals, `range()` |
-| 15 | [15_loop_control](15_loop_control/) | `break`, `continue`, `for-else`, `enumerate()` |
-| 14 | [14_real_world_loops](14_real_world_loops/) | Real-world data processing |
-| 19 | [19_while_loops](19_while_loops/) | `while`, menus, digit peeling |
+| 15 | [15_for_loop_fundamentals](15_for_loop_fundamentals/) | `for` fundamentals, `range()` |
+| 16 | [16_loop_control](16_loop_control/) | `break`, `continue`, `for-else`, `enumerate()` |
+| 17 | [17_real_world_loops](17_real_world_loops/) | Real-world data processing |
+| 18 | [18_while_loops](18_while_loops/) | `while`, menus, digit peeling |
 
-## Part 3 - Functions (exercises 17-18)
-
-| # | Folder | Topic |
-|---|--------|-------|
-| 18 | [18_function_fundamentals](18_function_fundamentals/) | Parameters, arguments, `return`, defaults |
-| 17 | [17_advanced_functions](17_advanced_functions/) | `*args`, `**kwargs`, lambda, recursion, scope |
-
-## Part 4 - Final combined project (exercise 20)
+## Part 3 - Functions (exercises 19-20)
 
 | # | Folder | Topic |
 |---|--------|-------|
-| 20 | [20_combined_final_project](20_combined_final_project/) | 12 mini-applications combining everything above |
+| 19 | [19_function_fundamentals](19_function_fundamentals/) | Parameters, arguments, `return`, defaults |
+| 20 | [20_advanced_functions](20_advanced_functions/) | `*args`, `**kwargs`, lambda, recursion, scope |
+
+## Part 4 - Final combined project (exercise 21)
+
+| # | Folder | Topic |
+|---|--------|-------|
+| 21 | [21_combined_final_project](21_combined_final_project/) | 12 mini-applications combining everything above |
 
 ---
 
 ## A note on the numbering
 
-Folder numbers reflect the order the exercises were worked through, which is **not**
-the best order to read them in — the three loop sets were tackled as 3, then 2, then
-1, and the two function sets likewise. The tables above are arranged in **learning
-order**, so following the links from top to bottom gives the sensible sequence.
+Folder numbers are the **learning order**: reading them 01 through 21, top to bottom,
+gives the sensible sequence. Data types and data structures first, then loops, then
+functions, then the combined project that uses all of them.
 
 ---
 
@@ -92,7 +91,7 @@ peeling with `% 10` and `// 10`, divisor testing up to the square root
 
 **Practice** - input validation with `try/except`, guarding edge cases (empty lists,
 zero divisors, `0!`, the number 1 in a prime test), menu-driven applications, and
-docstrings on every function from exercise 18 onward.
+docstrings on every function from exercise 19 onward.
 
 ---
 

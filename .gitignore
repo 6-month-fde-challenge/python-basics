@@ -12,7 +12,7 @@ ENV/
 # ---------------------------------------------------------------------------
 # Python bytecode and caches
 # Generated automatically whenever a module is imported (for example when
-# 20_combined_final_project/exercise_12 imports its operations module).
+# 21_combined_final_project/exercise_12 imports its operations module).
 # ---------------------------------------------------------------------------
 __pycache__/
 *.py[cod]

@@ -1,4 +1,4 @@
-# Exercise 15 - Loop Control
+# Exercise 16 - Loop Control
 
 Intermediate loop control: `for`, `break`, `continue`, `for-else`, `range()`,
 `enumerate()` and nested loops.
@@ -12,7 +12,7 @@ python 01_skip_divisible_by_5.py
 or from the repo root:
 
 ```bash
-python .\01_python_basics\15_loop_control\01_skip_divisible_by_5.py
+python .\01_python_basics\16_loop_control\01_skip_divisible_by_5.py
 ```
 
 ---

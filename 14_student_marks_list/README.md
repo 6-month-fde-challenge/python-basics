@@ -1,4 +1,4 @@
-# Exercise 21 - Student Marks List
+# Exercise 14 - Student Marks List
 
 ## What this exercise is about
 
@@ -57,11 +57,11 @@ still needed.
 ## Run it
 
 ```bash
-python 21_student_marks_list.py
+python 14_student_marks_list.py
 ```
 
 or from the repo root:
 
 ```bash
-python .\01_python_basics\21_student_marks_list\21_student_marks_list.py
+python .\01_python_basics\14_student_marks_list\14_student_marks_list.py
 ```

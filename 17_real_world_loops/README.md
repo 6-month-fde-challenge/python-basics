@@ -1,4 +1,4 @@
-# Exercise 14 - Real-World Loops
+# Exercise 17 - Real-World Loops
 
 Applying loops to realistic data-processing and problem-solving scenarios.
 
@@ -11,7 +11,7 @@ python 01_total_transactions.py
 or from the repo root:
 
 ```bash
-python .\01_python_basics\14_real_world_loops\01_total_transactions.py
+python .\01_python_basics\17_real_world_loops\01_total_transactions.py
 ```
 
 **Requires Python 3.6+** (f-strings). No external packages needed.

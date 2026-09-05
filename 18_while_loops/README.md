@@ -1,4 +1,4 @@
-# Exercise 19 - while Loops
+# Exercise 18 - while Loops
 
 Condition-controlled iteration, and where `while` is more appropriate than `for`.
 
@@ -11,7 +11,7 @@ python 01_print_1_to_100.py
 or from the repo root:
 
 ```bash
-python .\01_python_basics\19_while_loops\01_print_1_to_100.py
+python .\01_python_basics\18_while_loops\01_print_1_to_100.py
 ```
 
 ## The three-part rule

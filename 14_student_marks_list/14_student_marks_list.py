@@ -1,5 +1,5 @@
 """
-Exercise 21 - Create a Student Marks List
+Exercise 14 - Create a Student Marks List
 =========================================
 Concepts practised: indexing, negative indexing, slicing, len(), max(),
                     min(), sum(), sort(), append(), extend(), remove(),

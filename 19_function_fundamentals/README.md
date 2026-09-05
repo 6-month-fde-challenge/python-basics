@@ -1,4 +1,4 @@
-# Exercise 18 - Function Fundamentals
+# Exercise 19 - Function Fundamentals
 
 Reusable programming using custom functions, arguments, parameters, return values,
 scope and default arguments.
@@ -12,7 +12,7 @@ python 01_add.py
 or from the repo root:
 
 ```bash
-python .\01_python_basics\18_function_fundamentals\01_add.py
+python .\01_python_basics\19_function_fundamentals\01_add.py
 ```
 
 **Every function here has a docstring** — 34 functions, verified.

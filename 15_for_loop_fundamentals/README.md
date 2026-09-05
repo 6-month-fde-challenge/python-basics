@@ -1,4 +1,4 @@
-# Exercise 16 - for Loop Fundamentals
+# Exercise 15 - for Loop Fundamentals
 
 Building fundamentals in iteration using `for`, `range()`, strings, lists, tuples,
 sets and dictionaries.
@@ -15,7 +15,7 @@ python 01_print_1_to_100.py
 or from the repo root:
 
 ```bash
-python .\01_python_basics\16_for_loop_fundamentals\01_print_1_to_100.py
+python .\01_python_basics\15_for_loop_fundamentals\01_print_1_to_100.py
 ```
 
 Each program prints its working step by step rather than just the final answer, so

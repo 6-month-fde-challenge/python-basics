@@ -1,4 +1,4 @@
-# Exercise 17 - Advanced Functions
+# Exercise 20 - Advanced Functions
 
 `*args`, `**kwargs`, recursion, lambda functions, scope, and functions working
 together.
@@ -15,7 +15,7 @@ python 01_args_sum.py
 or from the repo root:
 
 ```bash
-python .\01_python_basics\17_advanced_functions\01_args_sum.py
+python .\01_python_basics\20_advanced_functions\01_args_sum.py
 ```
 
 The mini calculator (Q12) is deliberately split into **two** files, because it is
@@ -199,7 +199,7 @@ python 08_recursive_factorial.py  # includes the full call-stack trace
 or from the repo root:
 
 ```bash
-python .\01_python_basics\17_advanced_functions\operations.py
-python .\01_python_basics\17_advanced_functions\12_mini_calculator.py
-python .\01_python_basics\17_advanced_functions\08_recursive_factorial.py
+python .\01_python_basics\20_advanced_functions\operations.py
+python .\01_python_basics\20_advanced_functions\12_mini_calculator.py
+python .\01_python_basics\20_advanced_functions\08_recursive_factorial.py
 ```
