@@ -45,8 +45,8 @@ Multi-program sets. Each has its own README with per-question notes.
 |---|--------|-------|
 | 15 | [15_for_loop_fundamentals](15_for_loop_fundamentals/) | `for` fundamentals, `range()` |
 | 16 | [16_loop_control](16_loop_control/) | `break`, `continue`, `for-else`, `enumerate()` |
-| 17 | [17_real_world_loops](17_real_world_loops/) | Real-world data processing |
-| 18 | [18_while_loops](18_while_loops/) | `while`, menus, digit peeling |
+| 17 | [17_while_loops](17_while_loops/) | `while`, menus, digit peeling |
+| 18 | [18_real_world_loops](18_real_world_loops/) | Real-world data processing |
 
 ## Part 3 - Functions (exercises 19-20)
 
