@@ -1,0 +1,1 @@
+scan() does not descend into folders

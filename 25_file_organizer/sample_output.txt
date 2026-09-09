@@ -1,0 +1,121 @@
+### 1. Reset the demo folder (every file is a real file of its type)
+   demo_files/  18 files + 1 sub-folder
+   organized/   2 pre-existing file(s), to force a rename
+
+   Verifying that the binary files are what their names claim:
+      backup.zip         OK
+      beep.wav           OK
+      invoice.pdf        OK
+      logo.gif           OK
+      photo.jpg          OK
+      report.pdf         OK
+      screenshot.PNG     OK
+   7 checked
+
+   Now run:  python main.py --dry-run
+        and: python main.py
+
+### 2. Organize, with notes.txt held open (--lock) -> PermissionError
+   [WARNING] Holding notes.txt open for the whole run (--lock)
+   [WARNING] SKIPPED     .editorconfig : Unsupported file type (no extension)
+   [WARNING] SKIPPED     README : Unsupported file type (no extension)
+   [WARNING] Created destination folder: Archives
+   [WARNING] Created destination folder: Audio
+   [WARNING] Created destination folder: Data
+   [WARNING] Created destination folder: Text
+   [WARNING] Created destination folder: Code
+   [WARNING] Created destination folder: Documents
+   [WARNING] SKIPPED     mystery.xyz : Unsupported file type .xyz
+   [WARNING] Removed the half-finished copy left at Text/notes.txt by a failed move
+   [ERROR] FAILED      notes.txt : Access denied by the operating system: The process cannot access the file because it is being used by another process
+   [WARNING] Duplicate name in Images: photo.jpg -> photo (2).jpg
+
+========================================================================
+   MOVED
+========================================================================
+   Archives/
+      backup.zip
+   Audio/
+      beep.wav
+   Code/
+      index.html
+      script.py
+   Data/
+      config.json
+      data.csv
+      sales.xml
+   Documents/
+      invoice.pdf
+      report.pdf
+   Images/
+      logo.gif
+      photo.jpg  ->  photo (2).jpg
+      screenshot.PNG
+   Text/
+      debug.log
+      todo.md
+
+========================================================================
+   LEFT ALONE - unsupported file type
+========================================================================
+   .editorconfig                none
+   README                       none
+   mystery.xyz                  .xyz
+
+========================================================================
+   FAILED
+========================================================================
+   notes.txt                    FileAccessError        Access denied by the operating system: The process cannot access the file because it is being used by another process
+
+========================================================================
+   SUMMARY
+========================================================================
+   Files examined      : 18
+   Moved               : 14
+   Unsupported         : 3
+   Failed              : 1
+   Destination         : organized
+
+   Logs: logs/organizer.log (every operation), logs/errors.log (failures)
+exit code: 1
+
+### 3. Run again - notes.txt now moves, and lands as notes.txt
+###    (not notes (1).txt), because the failed move cleaned up
+   [WARNING] SKIPPED     .editorconfig : Unsupported file type (no extension)
+   [WARNING] SKIPPED     README : Unsupported file type (no extension)
+   [WARNING] SKIPPED     mystery.xyz : Unsupported file type .xyz
+
+========================================================================
+   MOVED
+========================================================================
+   Text/
+      notes.txt
+
+========================================================================
+   LEFT ALONE - unsupported file type
+========================================================================
+   .editorconfig                none
+   README                       none
+   mystery.xyz                  .xyz
+
+========================================================================
+   FAILED
+========================================================================
+   None.
+
+========================================================================
+   SUMMARY
+========================================================================
+   Files examined      : 4
+   Moved               : 1
+   Unsupported         : 3
+   Failed              : 0
+   Destination         : organized
+
+   Logs: logs/organizer.log (every operation), logs/errors.log (failures)
+exit code: 0
+
+### 4. A source folder that does not exist - the ONE fatal failure
+   [CRITICAL] Cannot start: Source does not exist [no_such_folder]
+   Source folder not found: no_such_folder
+exit code: 1

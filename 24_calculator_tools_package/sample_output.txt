@@ -1,0 +1,81 @@
+
+==============================================================
+  EXERCISE 24 - calculator_tools
+  A package, imported by a program that is not part of it
+==============================================================
+
+==============================================================
+  1. Function, module, package, import
+==============================================================
+    The same function, three ways:
+
+    calculator_tools.arithmetic.add(2, 3)  = 5
+    arithmetic.add(2, 3)                   = 5
+    calculator_tools.add(2, 3)             = 5
+
+    And what each name actually is:
+
+      calculator_tools             module      the PACKAGE
+      calculator_tools.arithmetic  module      a MODULE in it
+      arithmetic.add               function    a FUNCTION in that
+
+==============================================================
+  2. Arithmetic and percentages
+==============================================================
+    calculate('+', 12, 4)                  = 16
+    calculate('-', 12, 4)                  = 8
+    calculate('*', 12, 4)                  = 48
+    calculate('/', 12, 4)                  = 3
+    calculate('%', 12, 4)                  = 0
+    calculate('**', 12, 4)                 = 20,736
+
+    percentage(416, 500)                   = 83.2
+    percent_of(18, 1000)                   = 180
+
+==============================================================
+  3. Averages
+==============================================================
+    marks = [88, 92, 76, 65, 95]
+
+    total(marks)                           = 416
+    average(marks)                         = 83.2
+
+==============================================================
+  4. Temperature and unit conversion
+==============================================================
+    convert_temperature(100, 'c', 'f')     = 212
+    convert_temperature(0, 'c', 'f')       = 32
+    convert_temperature(212, 'f', 'c')     = 100
+    0 C -> 32 F, so temperature needs an offset, not just a
+    factor. That is why it is not in the unit table.
+
+    convert_length(5, 'km', 'mi')          = 3.11
+    convert_weight(70, 'kg', 'lb')         = 154.32
+
+==============================================================
+  5. Error handling
+==============================================================
+    divide by zero         DivisionByZeroError
+                             cannot divide 10 by zero (in divide)
+    not a number           InvalidValueError
+                             invalid value 'twelve': not a number (in add)
+    unknown operation      InvalidOperationError
+                             unsupported operation 'nonsense' (supported: add, divide, modulus, multiply, power, subtract) (in calculate)
+    unknown unit           InvalidOperationError
+                             unsupported length unit 'parsecs' (supported: cm, ft, in, km, m, mi) (in convert_length)
+    below absolute zero    InvalidValueError
+                             invalid value -300.0: below absolute zero (in convert_temperature)
+    empty list             InvalidValueError
+                             invalid value []: the list is empty (in average)
+
+    All six are subclasses of CalculatorError, so one clause
+    catches every error this package can raise:
+
+        except CalculatorError as error:
+            print(error)
+
+==============================================================
+  Every function above lives in calculator_tools/.
+  This file only imported them and printed the results.
+==============================================================
+

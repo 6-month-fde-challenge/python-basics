@@ -1,0 +1,166 @@
+2026-09-09 20:08:27 | INFO     | results            | ============================================================
+2026-09-09 20:08:27 | INFO     | results            | RUN STARTED - source: students.csv
+2026-09-09 20:08:27 | INFO     | results.student_ops | Loading student records from data\students.csv
+2026-09-09 20:08:27 | INFO     | results.student_ops | Loaded 14 raw record(s)
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '88' for Maths as 88.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '92' for Physics as 92.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '76' for Chemistry as 76.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '65' for English as 65.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '95' for Computer as 95.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Built record for Rahul Sharma (101) with 5 subjects
+2026-09-09 20:08:27 | INFO     | results.result_calc | Processed Rahul Sharma (101): 416/500 = 83.20% -> A -> PASS
+2026-09-09 20:08:27 | DEBUG    | results.main       | Finished with 101
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '74' for Maths as 74.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '81' for Physics as 81.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '69' for Chemistry as 69.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '90' for English as 90.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '77' for Computer as 77.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Built record for Priya Nair (102) with 5 subjects
+2026-09-09 20:08:27 | INFO     | results.result_calc | Processed Priya Nair (102): 391/500 = 78.20% -> B -> PASS
+2026-09-09 20:08:27 | DEBUG    | results.main       | Finished with 102
+2026-09-09 20:08:27 | ERROR    | results.main       | SKIPPED 103 - MissingStudentInfoError: Missing student information: 'name' is empty
+2026-09-09 20:08:27 | DEBUG    | results.main       | Finished with 103
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '45' for Maths as 45.0
+2026-09-09 20:08:27 | ERROR    | results.main       | SKIPPED 104 - InvalidMarksError: Invalid marks for Physics: 'abc' (not a number)
+2026-09-09 20:08:27 | DEBUG    | results.main       | Finished with 104
+2026-09-09 20:08:27 | ERROR    | results.main       | SKIPPED 105 - MarksOutOfRangeError: Invalid marks for Maths: 101.0 (outside the valid range 0-100)
+2026-09-09 20:08:27 | DEBUG    | results.main       | Finished with 105
+2026-09-09 20:08:27 | ERROR    | results.main       | SKIPPED 106 - MarksOutOfRangeError: Invalid marks for Maths: -5.0 (outside the valid range 0-100)
+2026-09-09 20:08:27 | DEBUG    | results.main       | Finished with 106
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '90' for Maths as 90.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '85' for Physics as 85.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '77' for Chemistry as 77.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '68' for English as 68.0
+2026-09-09 20:08:27 | ERROR    | results.main       | SKIPPED 107 - SubjectCountError: Expected 5 subject marks, found 4
+2026-09-09 20:08:27 | DEBUG    | results.main       | Finished with 107
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '35' for Maths as 35.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '28' for Physics as 28.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '41' for Chemistry as 41.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '30' for English as 30.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '39' for Computer as 39.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Built record for Vikram Singh (108) with 5 subjects
+2026-09-09 20:08:27 | INFO     | results.result_calc | Processed Vikram Singh (108): 173/500 = 34.60% -> F -> FAIL
+2026-09-09 20:08:27 | DEBUG    | results.main       | Finished with 108
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '100' for Maths as 100.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '100' for Physics as 100.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '100' for Chemistry as 100.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '100' for English as 100.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '100' for Computer as 100.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Built record for Neha Gupta (109) with 5 subjects
+2026-09-09 20:08:27 | INFO     | results.result_calc | Processed Neha Gupta (109): 500/500 = 100.00% -> A+ -> PASS
+2026-09-09 20:08:27 | DEBUG    | results.main       | Finished with 109
+2026-09-09 20:08:27 | ERROR    | results.main       | SKIPPED 110 - InvalidMarksError: Invalid marks for Maths: '' (no value given)
+2026-09-09 20:08:27 | DEBUG    | results.main       | Finished with 110
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '67' for Maths as 67.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '72' for Physics as 72.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '58' for Chemistry as 58.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '81' for English as 81.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '74' for Computer as 74.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Built record for Meera Joshi (111) with 5 subjects
+2026-09-09 20:08:27 | INFO     | results.result_calc | Processed Meera Joshi (111): 352/500 = 70.40% -> B -> PASS
+2026-09-09 20:08:27 | DEBUG    | results.main       | Finished with 111
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '95' for Maths as 95.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '90' for Physics as 90.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '88' for Chemistry as 88.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '30' for English as 30.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '85' for Computer as 85.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Built record for Rohit Kulkarni (112) with 5 subjects
+2026-09-09 20:08:27 | INFO     | results.result_calc | Processed Rohit Kulkarni (112): 388/500 = 77.60% -> B -> FAIL
+2026-09-09 20:08:27 | DEBUG    | results.main       | Finished with 112
+2026-09-09 20:08:27 | ERROR    | results.main       | SKIPPED row 13 - MissingStudentInfoError: Missing student information: 'roll' is empty
+2026-09-09 20:08:27 | DEBUG    | results.main       | Finished with row 13
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '52.5' for Maths as 52.5
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '61' for Physics as 61.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '47' for Chemistry as 47.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '58' for English as 58.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Parsed mark '63' for Computer as 63.0
+2026-09-09 20:08:27 | DEBUG    | results.student_ops | Built record for Farah Khan (114) with 5 subjects
+2026-09-09 20:08:27 | INFO     | results.result_calc | Processed Farah Khan (114): 282/500 = 56.30% -> D -> PASS
+2026-09-09 20:08:27 | DEBUG    | results.main       | Finished with 114
+2026-09-09 20:08:27 | INFO     | results.main       | Summary: read=14 processed=7 skipped=7 pass=5 fail=2
+2026-09-09 20:08:27 | INFO     | results.main       | RUN FINISHED
+2026-09-09 20:08:27 | INFO     | results            | ============================================================
+2026-09-09 20:08:27 | INFO     | results            | RUN STARTED - source: not_here.csv
+2026-09-09 20:08:27 | INFO     | results.student_ops | Loading student records from data\not_here.csv
+2026-09-09 20:08:27 | CRITICAL | results.student_ops | Data file not found: data/not_here.csv - nothing to process
+2026-09-09 21:10:30 | INFO     | results            | ============================================================
+2026-09-09 21:10:30 | INFO     | results            | RUN STARTED - source: students.csv
+2026-09-09 21:10:30 | INFO     | results.student_ops | Loading student records from data\students.csv
+2026-09-09 21:10:30 | INFO     | results.student_ops | Loaded 14 raw record(s)
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '88' for Maths as 88.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '92' for Physics as 92.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '76' for Chemistry as 76.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '65' for English as 65.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '95' for Computer as 95.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Built record for Rahul Sharma (101) with 5 subjects
+2026-09-09 21:10:30 | INFO     | results.result_calc | Processed Rahul Sharma (101): 416/500 = 83.20% -> A -> PASS
+2026-09-09 21:10:30 | DEBUG    | results.main       | Finished with 101
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '74' for Maths as 74.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '81' for Physics as 81.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '69' for Chemistry as 69.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '90' for English as 90.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '77' for Computer as 77.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Built record for Priya Nair (102) with 5 subjects
+2026-09-09 21:10:30 | INFO     | results.result_calc | Processed Priya Nair (102): 391/500 = 78.20% -> B -> PASS
+2026-09-09 21:10:30 | DEBUG    | results.main       | Finished with 102
+2026-09-09 21:10:30 | ERROR    | results.main       | SKIPPED 103 - MissingStudentInfoError: Missing student information: 'name' is empty
+2026-09-09 21:10:30 | DEBUG    | results.main       | Finished with 103
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '45' for Maths as 45.0
+2026-09-09 21:10:30 | ERROR    | results.main       | SKIPPED 104 - InvalidMarksError: Invalid marks for Physics: 'abc' (not a number)
+2026-09-09 21:10:30 | DEBUG    | results.main       | Finished with 104
+2026-09-09 21:10:30 | ERROR    | results.main       | SKIPPED 105 - MarksOutOfRangeError: Invalid marks for Maths: 101.0 (outside the valid range 0-100)
+2026-09-09 21:10:30 | DEBUG    | results.main       | Finished with 105
+2026-09-09 21:10:30 | ERROR    | results.main       | SKIPPED 106 - MarksOutOfRangeError: Invalid marks for Maths: -5.0 (outside the valid range 0-100)
+2026-09-09 21:10:30 | DEBUG    | results.main       | Finished with 106
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '90' for Maths as 90.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '85' for Physics as 85.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '77' for Chemistry as 77.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '68' for English as 68.0
+2026-09-09 21:10:30 | ERROR    | results.main       | SKIPPED 107 - SubjectCountError: Expected 5 subject marks, found 4
+2026-09-09 21:10:30 | DEBUG    | results.main       | Finished with 107
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '35' for Maths as 35.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '28' for Physics as 28.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '41' for Chemistry as 41.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '30' for English as 30.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '39' for Computer as 39.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Built record for Vikram Singh (108) with 5 subjects
+2026-09-09 21:10:30 | INFO     | results.result_calc | Processed Vikram Singh (108): 173/500 = 34.60% -> F -> FAIL
+2026-09-09 21:10:30 | DEBUG    | results.main       | Finished with 108
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '100' for Maths as 100.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '100' for Physics as 100.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '100' for Chemistry as 100.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '100' for English as 100.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '100' for Computer as 100.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Built record for Neha Gupta (109) with 5 subjects
+2026-09-09 21:10:30 | INFO     | results.result_calc | Processed Neha Gupta (109): 500/500 = 100.00% -> A+ -> PASS
+2026-09-09 21:10:30 | DEBUG    | results.main       | Finished with 109
+2026-09-09 21:10:30 | ERROR    | results.main       | SKIPPED 110 - InvalidMarksError: Invalid marks for Maths: '' (no value given)
+2026-09-09 21:10:30 | DEBUG    | results.main       | Finished with 110
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '67' for Maths as 67.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '72' for Physics as 72.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '58' for Chemistry as 58.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '81' for English as 81.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '74' for Computer as 74.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Built record for Meera Joshi (111) with 5 subjects
+2026-09-09 21:10:30 | INFO     | results.result_calc | Processed Meera Joshi (111): 352/500 = 70.40% -> B -> PASS
+2026-09-09 21:10:30 | DEBUG    | results.main       | Finished with 111
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '95' for Maths as 95.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '90' for Physics as 90.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '88' for Chemistry as 88.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '30' for English as 30.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '85' for Computer as 85.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Built record for Rohit Kulkarni (112) with 5 subjects
+2026-09-09 21:10:30 | INFO     | results.result_calc | Processed Rohit Kulkarni (112): 388/500 = 77.60% -> B -> FAIL
+2026-09-09 21:10:30 | DEBUG    | results.main       | Finished with 112
+2026-09-09 21:10:30 | ERROR    | results.main       | SKIPPED row 13 - MissingStudentInfoError: Missing student information: 'roll' is empty
+2026-09-09 21:10:30 | DEBUG    | results.main       | Finished with row 13
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '52.5' for Maths as 52.5
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '61' for Physics as 61.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '47' for Chemistry as 47.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '58' for English as 58.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Parsed mark '63' for Computer as 63.0
+2026-09-09 21:10:30 | DEBUG    | results.student_ops | Built record for Farah Khan (114) with 5 subjects
+2026-09-09 21:10:30 | INFO     | results.result_calc | Processed Farah Khan (114): 282/500 = 56.30% -> D -> PASS
+2026-09-09 21:10:30 | DEBUG    | results.main       | Finished with 114
+2026-09-09 21:10:30 | INFO     | results.main       | Summary: read=14 processed=7 skipped=7 pass=5 fail=2
+2026-09-09 21:10:30 | INFO     | results.main       | RUN FINISHED

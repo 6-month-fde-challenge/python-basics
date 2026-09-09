@@ -1,0 +1,8 @@
+2026-09-09 20:35:22 | CRITICAL | app.menu       | dispatch:145 | Unexpected application failure during 'Simulate failure'
+Traceback (most recent call last):
+  File "C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\22_application_activity_logger\menu.py", line 135, in dispatch
+    action()
+  File "C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\22_application_activity_logger\menu.py", line 99, in do_simulated_failure
+    return broken["this key does not exist"]      # KeyError
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'this key does not exist'

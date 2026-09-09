@@ -1,0 +1,48 @@
+2026-09-09 20:31:10 | WARNING  | app            | main:58  | Application interrupted by the user (Ctrl+C)
+2026-09-09 20:31:10 | WARNING  | app            | main:73  | Shutting down with 'rahul' still logged in
+2026-09-09 20:31:10 | INFO     | app            | main:75  | Application stopped
+2026-09-09 20:31:14 | DEBUG    | app            | setup_logging:91  | Logging configured -> logs\application.log and logs\error.log
+2026-09-09 20:31:14 | INFO     | app            | main:40  | Application started
+2026-09-09 20:31:16 | DEBUG    | app.menu       | dispatch:132 | Activity selected: Login
+2026-09-09 20:31:24 | DEBUG    | app.auth       | login:51  | Login attempt for username='rahul'
+2026-09-09 20:31:24 | INFO     | app.auth       | login:70  | User logged in: rahul
+2026-09-09 20:31:24 | DEBUG    | app.menu       | dispatch:150 | Activity 'Login' finished
+2026-09-09 20:32:18 | DEBUG    | app.menu       | dispatch:132 | Activity selected: Calculate
+2026-09-09 20:32:22 | WARNING  | app.calculator | run:104 | Unknown operation choice: '+'
+2026-09-09 20:32:22 | DEBUG    | app.menu       | dispatch:150 | Activity 'Calculate' finished
+2026-09-09 20:32:39 | DEBUG    | app.menu       | dispatch:132 | Activity selected: Calculate
+2026-09-09 20:32:54 | DEBUG    | app.calculator | read_number:50  | Parsed '5' as 5.0
+2026-09-09 20:32:56 | DEBUG    | app.calculator | read_number:50  | Parsed '8' as 8.0
+2026-09-09 20:32:56 | DEBUG    | app.calculator | calculate:61  | Calculating 5.0 + 8.0
+2026-09-09 20:32:56 | INFO     | app.calculator | calculate:86  | Calculation completed: 5.0 + 8.0 = 13.0
+2026-09-09 20:32:56 | DEBUG    | app.calculator | calculate:92  | calculate() finished for operator '+'
+2026-09-09 20:32:56 | DEBUG    | app.menu       | dispatch:150 | Activity 'Calculate' finished
+2026-09-09 20:33:40 | DEBUG    | app.menu       | dispatch:132 | Activity selected: Calculate
+2026-09-09 20:33:52 | DEBUG    | app.calculator | read_number:50  | Parsed '5' as 5.0
+2026-09-09 20:33:54 | WARNING  | app.calculator | read_number:47  | Non-numeric input rejected: 'hgcgf'
+2026-09-09 20:34:20 | DEBUG    | app.calculator | read_number:50  | Parsed '5' as 5.0
+2026-09-09 20:34:20 | DEBUG    | app.calculator | calculate:61  | Calculating 5.0 + 5.0
+2026-09-09 20:34:20 | INFO     | app.calculator | calculate:86  | Calculation completed: 5.0 + 5.0 = 10.0
+2026-09-09 20:34:20 | DEBUG    | app.calculator | calculate:92  | calculate() finished for operator '+'
+2026-09-09 20:34:20 | DEBUG    | app.menu       | dispatch:150 | Activity 'Calculate' finished
+2026-09-09 20:34:32 | DEBUG    | app.menu       | dispatch:132 | Activity selected: Calculate
+2026-09-09 20:34:40 | DEBUG    | app.calculator | read_number:50  | Parsed '56' as 56.0
+2026-09-09 20:34:43 | DEBUG    | app.calculator | read_number:50  | Parsed '26496' as 26496.0
+2026-09-09 20:34:43 | DEBUG    | app.calculator | calculate:61  | Calculating 56.0 - 26496.0
+2026-09-09 20:34:43 | INFO     | app.calculator | calculate:86  | Calculation completed: 56.0 - 26496.0 = -26440.0
+2026-09-09 20:34:43 | DEBUG    | app.calculator | calculate:92  | calculate() finished for operator '-'
+2026-09-09 20:34:43 | DEBUG    | app.menu       | dispatch:150 | Activity 'Calculate' finished
+2026-09-09 20:35:22 | DEBUG    | app.menu       | dispatch:132 | Activity selected: Simulate failure
+2026-09-09 20:35:22 | DEBUG    | app.menu       | do_simulated_failure:97  | Simulating an unexpected failure on purpose
+2026-09-09 20:35:22 | CRITICAL | app.menu       | dispatch:145 | Unexpected application failure during 'Simulate failure'
+Traceback (most recent call last):
+  File "C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\22_application_activity_logger\menu.py", line 135, in dispatch
+    action()
+  File "C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\22_application_activity_logger\menu.py", line 99, in do_simulated_failure
+    return broken["this key does not exist"]      # KeyError
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'this key does not exist'
+2026-09-09 20:35:22 | DEBUG    | app.menu       | dispatch:150 | Activity 'Simulate failure' finished
+2026-09-09 20:35:26 | INFO     | app.menu       | dispatch:123 | Exit selected - shutting down
+2026-09-09 20:35:26 | WARNING  | app            | main:73  | Shutting down with 'rahul' still logged in
+2026-09-09 20:35:26 | INFO     | app            | main:75  | Application stopped

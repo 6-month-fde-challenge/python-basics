@@ -1,0 +1,15 @@
+2026-09-09 20:08:27 | ERROR    | results.main       | SKIPPED 103 - MissingStudentInfoError: Missing student information: 'name' is empty
+2026-09-09 20:08:27 | ERROR    | results.main       | SKIPPED 104 - InvalidMarksError: Invalid marks for Physics: 'abc' (not a number)
+2026-09-09 20:08:27 | ERROR    | results.main       | SKIPPED 105 - MarksOutOfRangeError: Invalid marks for Maths: 101.0 (outside the valid range 0-100)
+2026-09-09 20:08:27 | ERROR    | results.main       | SKIPPED 106 - MarksOutOfRangeError: Invalid marks for Maths: -5.0 (outside the valid range 0-100)
+2026-09-09 20:08:27 | ERROR    | results.main       | SKIPPED 107 - SubjectCountError: Expected 5 subject marks, found 4
+2026-09-09 20:08:27 | ERROR    | results.main       | SKIPPED 110 - InvalidMarksError: Invalid marks for Maths: '' (no value given)
+2026-09-09 20:08:27 | ERROR    | results.main       | SKIPPED row 13 - MissingStudentInfoError: Missing student information: 'roll' is empty
+2026-09-09 20:08:27 | CRITICAL | results.student_ops | Data file not found: data/not_here.csv - nothing to process
+2026-09-09 21:10:30 | ERROR    | results.main       | SKIPPED 103 - MissingStudentInfoError: Missing student information: 'name' is empty
+2026-09-09 21:10:30 | ERROR    | results.main       | SKIPPED 104 - InvalidMarksError: Invalid marks for Physics: 'abc' (not a number)
+2026-09-09 21:10:30 | ERROR    | results.main       | SKIPPED 105 - MarksOutOfRangeError: Invalid marks for Maths: 101.0 (outside the valid range 0-100)
+2026-09-09 21:10:30 | ERROR    | results.main       | SKIPPED 106 - MarksOutOfRangeError: Invalid marks for Maths: -5.0 (outside the valid range 0-100)
+2026-09-09 21:10:30 | ERROR    | results.main       | SKIPPED 107 - SubjectCountError: Expected 5 subject marks, found 4
+2026-09-09 21:10:30 | ERROR    | results.main       | SKIPPED 110 - InvalidMarksError: Invalid marks for Maths: '' (no value given)
+2026-09-09 21:10:30 | ERROR    | results.main       | SKIPPED row 13 - MissingStudentInfoError: Missing student information: 'roll' is empty

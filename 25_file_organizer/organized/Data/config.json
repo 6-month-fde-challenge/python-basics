@@ -1,0 +1,5 @@
+{
+  "debug": false,
+  "retries": 3,
+  "categories": ["Images", "Text", "Documents", "Data"]
+}

@@ -88,7 +88,17 @@ temp/
 #
 #   sample_output.txt  - captured program output, part of the deliverable
 #   requirements.txt   - dependency list, must be committed
+#   logs/*.log         - exercises 22-25 are ASSESSED on their log
+#                        files, so the `*.log` rule above must not eat them.
+#                        Only logs/ is exempted; a stray *.log anywhere else
+#                        is still scratch.
+#   demo_files/        - the input exercise 25 organizes, including the
+#                        dotfile that proves the "no extension" branch
 # ---------------------------------------------------------------------------
 !**/sample_output.txt
 !**/requirements.txt
+!**/logs/
+!**/logs/*.log
+!25_file_organizer/demo_files/
+!25_file_organizer/demo_files/**
 

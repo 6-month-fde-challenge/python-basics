@@ -1,0 +1,3 @@
+# A dotfile. splitext() gives it an EMPTY extension,
+# not an extension of '.editorconfig'.
+root = true

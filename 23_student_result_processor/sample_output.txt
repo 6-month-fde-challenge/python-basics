@@ -1,0 +1,53 @@
+   [ERROR] SKIPPED 103 - MissingStudentInfoError: Missing student information: 'name' is empty
+   [ERROR] SKIPPED 104 - InvalidMarksError: Invalid marks for Physics: 'abc' (not a number)
+   [ERROR] SKIPPED 105 - MarksOutOfRangeError: Invalid marks for Maths: 101.0 (outside the valid range 0-100)
+   [ERROR] SKIPPED 106 - MarksOutOfRangeError: Invalid marks for Maths: -5.0 (outside the valid range 0-100)
+   [ERROR] SKIPPED 107 - SubjectCountError: Expected 5 subject marks, found 4
+   [ERROR] SKIPPED 110 - InvalidMarksError: Invalid marks for Maths: '' (no value given)
+   [ERROR] SKIPPED row 13 - MissingStudentInfoError: Missing student information: 'roll' is empty
+
+==============================================================================
+   RESULT SHEET
+==============================================================================
+   ROLL   NAME                TOTAL  PERCENT  GRADE  STATUS
+   --------------------------------------------------------
+   101    Rahul Sharma      416/500   83.20%      A  PASS
+   102    Priya Nair        391/500   78.20%      B  PASS
+   108    Vikram Singh      173/500   34.60%      F  FAIL
+          -> 34.6% is below 40.0%, and Physics, English below 33
+   109    Neha Gupta        500/500  100.00%     A+  PASS
+   111    Meera Joshi       352/500   70.40%      B  PASS
+   112    Rohit Kulkarni    388/500   77.60%      B  FAIL
+          -> English below the subject minimum of 33
+   114    Farah Khan        282/500   56.30%      D  PASS
+
+==============================================================================
+   SKIPPED RECORDS
+==============================================================================
+   103      MissingStudentInfoError  Missing student information: 'name' is empty
+   104      InvalidMarksError        Invalid marks for Physics: 'abc' (not a number)
+   105      MarksOutOfRangeError     Invalid marks for Maths: 101.0 (outside the valid range 0-100)
+   106      MarksOutOfRangeError     Invalid marks for Maths: -5.0 (outside the valid range 0-100)
+   107      SubjectCountError        Expected 5 subject marks, found 4
+   110      InvalidMarksError        Invalid marks for Maths: '' (no value given)
+   row 13   MissingStudentInfoError  Missing student information: 'roll' is empty
+
+==============================================================================
+   SUMMARY
+==============================================================================
+   Records read        : 14
+   Processed           : 7
+   Skipped (logged)    : 7
+   Passed / Failed     : 5 / 2
+   Class average       : 71.47%
+   Highest             : Neha Gupta (100.00%)
+
+   Logs: logs/application.log (everything), logs/error.log (failures)
+
+############################################################
+# Second run: a data file that does not exist - the ONE
+# failure that stops the program.
+############################################################
+   [CRITICAL] Data file not found: data/not_here.csv - nothing to process
+   The student data file could not be read. See logs/error.log
+exit code: 1

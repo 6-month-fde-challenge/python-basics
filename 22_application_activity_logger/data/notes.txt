@@ -1,0 +1,6 @@
+The activity log is the first place to look when something goes wrong.
+DEBUG tells you what the code was doing.
+INFO tells you what the user was doing.
+WARNING tells you what looked odd.
+ERROR tells you what failed.
+CRITICAL tells you what broke.

@@ -1,0 +1,232 @@
+================================================================
+ sample_output.txt - captured from a real run
+================================================================
+     python main.py < demo_input.txt
+
+ Log in with admin / python123 (or rahul / learner2026).
+ The answers are piped in, so each prompt and its answer appear
+ on one line. The run produces all five log levels.
+================================================================
+
+
+========================================================
+   APPLICATION ACTIVITY LOGGER      [ not logged in ]
+========================================================
+   1. Login
+   2. Calculate
+   3. Read a File
+   4. Write a File
+   5. Logout
+   --------------------------------------------------
+   6. Simulate an unexpected failure   (CRITICAL demo)
+   0. Exit
+========================================================
+   Choose an activity :    [WARNING] Activity 'Calculate' blocked: no user is logged in
+   Log in first.
+
+========================================================
+   APPLICATION ACTIVITY LOGGER      [ not logged in ]
+========================================================
+   1. Login
+   2. Calculate
+   3. Read a File
+   4. Write a File
+   5. Logout
+   --------------------------------------------------
+   6. Simulate an unexpected failure   (CRITICAL demo)
+   0. Exit
+========================================================
+   Choose an activity :    Username :    Password :    [WARNING] Login failed: wrong password for 'admin'
+   Login failed.
+
+========================================================
+   APPLICATION ACTIVITY LOGGER      [ not logged in ]
+========================================================
+   1. Login
+   2. Calculate
+   3. Read a File
+   4. Write a File
+   5. Logout
+   --------------------------------------------------
+   6. Simulate an unexpected failure   (CRITICAL demo)
+   0. Exit
+========================================================
+   Choose an activity :    Username :    Password :    Welcome, admin.
+
+========================================================
+   APPLICATION ACTIVITY LOGGER      [ admin ]
+========================================================
+   1. Login
+   2. Calculate
+   3. Read a File
+   4. Write a File
+   5. Logout
+   --------------------------------------------------
+   6. Simulate an unexpected failure   (CRITICAL demo)
+   0. Exit
+========================================================
+   Choose an activity : 
+   OPERATIONS
+      1. +
+      2. -
+      3. *
+      4. /
+      5. %
+      6. **
+   Choose an operation :    First number       :    Second number      :    [WARNING] Non-numeric input rejected: 'abc'
+   Please type a number, for example 12 or 3.5
+   Second number      :    RESULT: 12.0 + 8.0 = 20.0
+
+========================================================
+   APPLICATION ACTIVITY LOGGER      [ admin ]
+========================================================
+   1. Login
+   2. Calculate
+   3. Read a File
+   4. Write a File
+   5. Logout
+   --------------------------------------------------
+   6. Simulate an unexpected failure   (CRITICAL demo)
+   0. Exit
+========================================================
+   Choose an activity : 
+   OPERATIONS
+      1. +
+      2. -
+      3. *
+      4. /
+      5. %
+      6. **
+   Choose an operation :    First number       :    Second number      :    [ERROR] Division by zero attempted: 10.0 / 0.0
+   Cannot divide by zero.
+
+========================================================
+   APPLICATION ACTIVITY LOGGER      [ admin ]
+========================================================
+   1. Login
+   2. Calculate
+   3. Read a File
+   4. Write a File
+   5. Logout
+   --------------------------------------------------
+   6. Simulate an unexpected failure   (CRITICAL demo)
+   0. Exit
+========================================================
+   Choose an activity :    File to read  :    ---------------- contents ----------------
+   The activity log is the first place to look when something goes wrong.
+   DEBUG tells you what the code was doing.
+   INFO tells you what the user was doing.
+   WARNING tells you what looked odd.
+   ERROR tells you what failed.
+   CRITICAL tells you what broke.
+   ------------------------------------------
+
+========================================================
+   APPLICATION ACTIVITY LOGGER      [ admin ]
+========================================================
+   1. Login
+   2. Calculate
+   3. Read a File
+   4. Write a File
+   5. Logout
+   --------------------------------------------------
+   6. Simulate an unexpected failure   (CRITICAL demo)
+   0. Exit
+========================================================
+   Choose an activity :    File to read  :    [WARNING] File was empty: data\empty.txt
+   The file opened but contains nothing.
+
+========================================================
+   APPLICATION ACTIVITY LOGGER      [ admin ]
+========================================================
+   1. Login
+   2. Calculate
+   3. Read a File
+   4. Write a File
+   5. Logout
+   --------------------------------------------------
+   6. Simulate an unexpected failure   (CRITICAL demo)
+   0. Exit
+========================================================
+   Choose an activity :    File to read  :    [ERROR] File could not be opened - not found: data\missing.txt
+   No such file.
+
+========================================================
+   APPLICATION ACTIVITY LOGGER      [ admin ]
+========================================================
+   1. Login
+   2. Calculate
+   3. Read a File
+   4. Write a File
+   5. Logout
+   --------------------------------------------------
+   6. Simulate an unexpected failure   (CRITICAL demo)
+   0. Exit
+========================================================
+   Choose an activity :    File to write :    Text to store :    Saved.
+
+========================================================
+   APPLICATION ACTIVITY LOGGER      [ admin ]
+========================================================
+   1. Login
+   2. Calculate
+   3. Read a File
+   4. Write a File
+   5. Logout
+   --------------------------------------------------
+   6. Simulate an unexpected failure   (CRITICAL demo)
+   0. Exit
+========================================================
+   Choose an activity :    [CRITICAL] Unexpected application failure during 'Simulate failure'
+Traceback (most recent call last):
+  File "C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\22_application_activity_logger\menu.py", line 135, in dispatch
+    action()
+  File "C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\22_application_activity_logger\menu.py", line 99, in do_simulated_failure
+    return broken["this key does not exist"]      # KeyError
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'this key does not exist'
+   Unexpected application failure - see logs/error.log
+
+========================================================
+   APPLICATION ACTIVITY LOGGER      [ admin ]
+========================================================
+   1. Login
+   2. Calculate
+   3. Read a File
+   4. Write a File
+   5. Logout
+   --------------------------------------------------
+   6. Simulate an unexpected failure   (CRITICAL demo)
+   0. Exit
+========================================================
+   Choose an activity :    [WARNING] Invalid menu choice: '9'
+   That is not one of the options.
+
+========================================================
+   APPLICATION ACTIVITY LOGGER      [ admin ]
+========================================================
+   1. Login
+   2. Calculate
+   3. Read a File
+   4. Write a File
+   5. Logout
+   --------------------------------------------------
+   6. Simulate an unexpected failure   (CRITICAL demo)
+   0. Exit
+========================================================
+   Choose an activity :    Logged out.
+
+========================================================
+   APPLICATION ACTIVITY LOGGER      [ not logged in ]
+========================================================
+   1. Login
+   2. Calculate
+   3. Read a File
+   4. Write a File
+   5. Logout
+   --------------------------------------------------
+   6. Simulate an unexpected failure   (CRITICAL demo)
+   0. Exit
+========================================================
+   Choose an activity : 
+   Goodbye. Logs written to logs/

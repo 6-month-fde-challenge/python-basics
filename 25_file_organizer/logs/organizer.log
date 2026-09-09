@@ -1,0 +1,79 @@
+2026-09-09 22:58:22 | INFO     | organizer            | ==============================================================
+2026-09-09 22:58:22 | INFO     | organizer            | RUN STARTED   source=demo_files  destination=organized
+2026-09-09 22:58:22 | DEBUG    | organizer.main       | Categories known: Images: 8, Text: 4, Documents: 6, Data: 8, Audio: 5, Video: 5, Archives: 5, Code: 8
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Skipping sub-folder subfolder
+2026-09-09 22:58:22 | INFO     | organizer.detector   | Scanned demo_files - 18 file(s), 1 sub-folder(s)
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for .editorconfig
+2026-09-09 22:58:22 | WARNING  | organizer.main       | SKIPPED     .editorconfig : Unsupported file type (no extension)
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for README
+2026-09-09 22:58:22 | WARNING  | organizer.main       | SKIPPED     README : Unsupported file type (no extension)
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for backup.zip
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | backup.zip -> Archives (.zip)
+2026-09-09 22:58:22 | WARNING  | organizer.mover      | Created destination folder: Archives
+2026-09-09 22:58:22 | DEBUG    | organizer.mover      | shutil.move done: backup.zip -> C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\25_file_organizer\organized\Archives\backup.zip
+2026-09-09 22:58:22 | INFO     | organizer.main       | MOVED  backup.zip -> Archives/backup.zip
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for beep.wav
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | beep.wav -> Audio (.wav)
+2026-09-09 22:58:22 | WARNING  | organizer.mover      | Created destination folder: Audio
+2026-09-09 22:58:22 | DEBUG    | organizer.mover      | shutil.move done: beep.wav -> C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\25_file_organizer\organized\Audio\beep.wav
+2026-09-09 22:58:22 | INFO     | organizer.main       | MOVED  beep.wav -> Audio/beep.wav
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for config.json
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | config.json -> Data (.json)
+2026-09-09 22:58:22 | WARNING  | organizer.mover      | Created destination folder: Data
+2026-09-09 22:58:22 | DEBUG    | organizer.mover      | shutil.move done: config.json -> C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\25_file_organizer\organized\Data\config.json
+2026-09-09 22:58:22 | INFO     | organizer.main       | MOVED  config.json -> Data/config.json
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for data.csv
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | data.csv -> Data (.csv)
+2026-09-09 22:58:22 | DEBUG    | organizer.mover      | shutil.move done: data.csv -> C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\25_file_organizer\organized\Data\data.csv
+2026-09-09 22:58:22 | INFO     | organizer.main       | MOVED  data.csv -> Data/data.csv
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for debug.log
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | debug.log -> Text (.log)
+2026-09-09 22:58:22 | WARNING  | organizer.mover      | Created destination folder: Text
+2026-09-09 22:58:22 | DEBUG    | organizer.mover      | shutil.move done: debug.log -> C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\25_file_organizer\organized\Text\debug.log
+2026-09-09 22:58:22 | INFO     | organizer.main       | MOVED  debug.log -> Text/debug.log
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for index.html
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | index.html -> Code (.html)
+2026-09-09 22:58:22 | WARNING  | organizer.mover      | Created destination folder: Code
+2026-09-09 22:58:22 | DEBUG    | organizer.mover      | shutil.move done: index.html -> C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\25_file_organizer\organized\Code\index.html
+2026-09-09 22:58:22 | INFO     | organizer.main       | MOVED  index.html -> Code/index.html
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for invoice.pdf
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | invoice.pdf -> Documents (.pdf)
+2026-09-09 22:58:22 | WARNING  | organizer.mover      | Created destination folder: Documents
+2026-09-09 22:58:22 | DEBUG    | organizer.mover      | shutil.move done: invoice.pdf -> C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\25_file_organizer\organized\Documents\invoice.pdf
+2026-09-09 22:58:22 | INFO     | organizer.main       | MOVED  invoice.pdf -> Documents/invoice.pdf
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for logo.gif
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | logo.gif -> Images (.gif)
+2026-09-09 22:58:22 | DEBUG    | organizer.mover      | shutil.move done: logo.gif -> C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\25_file_organizer\organized\Images\logo.gif
+2026-09-09 22:58:22 | INFO     | organizer.main       | MOVED  logo.gif -> Images/logo.gif
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for mystery.xyz
+2026-09-09 22:58:22 | WARNING  | organizer.main       | SKIPPED     mystery.xyz : Unsupported file type .xyz
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for notes.txt
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | notes.txt -> Text (.txt)
+2026-09-09 22:58:22 | DEBUG    | organizer.mover      | shutil.move done: notes.txt -> C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\25_file_organizer\organized\Text\notes.txt
+2026-09-09 22:58:22 | INFO     | organizer.main       | MOVED  notes.txt -> Text/notes.txt
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for photo.jpg
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | photo.jpg -> Images (.jpg)
+2026-09-09 22:58:22 | DEBUG    | organizer.mover      | shutil.move done: photo.jpg -> C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\25_file_organizer\organized\Images\photo.jpg
+2026-09-09 22:58:22 | INFO     | organizer.main       | MOVED  photo.jpg -> Images/photo.jpg
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for report.pdf
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | report.pdf -> Documents (.pdf)
+2026-09-09 22:58:22 | DEBUG    | organizer.mover      | shutil.move done: report.pdf -> C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\25_file_organizer\organized\Documents\report.pdf
+2026-09-09 22:58:22 | INFO     | organizer.main       | MOVED  report.pdf -> Documents/report.pdf
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for sales.xml
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | sales.xml -> Data (.xml)
+2026-09-09 22:58:22 | DEBUG    | organizer.mover      | shutil.move done: sales.xml -> C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\25_file_organizer\organized\Data\sales.xml
+2026-09-09 22:58:22 | INFO     | organizer.main       | MOVED  sales.xml -> Data/sales.xml
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for screenshot.PNG
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | screenshot.PNG -> Images (.png)
+2026-09-09 22:58:22 | DEBUG    | organizer.mover      | shutil.move done: screenshot.PNG -> C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\25_file_organizer\organized\Images\screenshot.PNG
+2026-09-09 22:58:22 | INFO     | organizer.main       | MOVED  screenshot.PNG -> Images/screenshot.PNG
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for script.py
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | script.py -> Code (.py)
+2026-09-09 22:58:22 | DEBUG    | organizer.mover      | shutil.move done: script.py -> C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\25_file_organizer\organized\Code\script.py
+2026-09-09 22:58:22 | INFO     | organizer.main       | MOVED  script.py -> Code/script.py
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | Detecting category for todo.md
+2026-09-09 22:58:22 | DEBUG    | organizer.detector   | todo.md -> Text (.md)
+2026-09-09 22:58:22 | DEBUG    | organizer.mover      | shutil.move done: todo.md -> C:\Users\asus\Desktop\work\6-month-fde-challenge\01_python_basics\25_file_organizer\organized\Text\todo.md
+2026-09-09 22:58:22 | INFO     | organizer.main       | MOVED  todo.md -> Text/todo.md
+2026-09-09 22:58:22 | INFO     | organizer.main       | SUMMARY examined=18 moved=15 unsupported=3 failed=0
+2026-09-09 22:58:22 | INFO     | organizer.main       | RUN FINISHED

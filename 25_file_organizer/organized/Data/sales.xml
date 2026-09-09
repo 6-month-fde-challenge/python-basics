@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sales>
+  <item name="Laptop" units="3" />
+  <item name="Mouse" units="11" />
+</sales>
