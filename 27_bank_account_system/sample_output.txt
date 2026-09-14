@@ -1,0 +1,149 @@
+
+==============================================================
+  EXERCISE 27 - Bank Account System
+  Class variables, class methods, and refusing a bad withdrawal
+==============================================================
+
+==============================================================
+  1. Opening accounts
+==============================================================
+    BankAccount.get_total_accounts()  -> 0
+
+      BankAccount('Aarav Sharma', 'AC1001', 25000.0)
+      BankAccount('Diya Menon', 'AC1002', 8400.5)
+      BankAccount('Kabir Rao', 'AC1003', 0.0)
+      BankAccount('Meera Nair', 'AC1004', 1000.0)
+
+    BankAccount.get_total_accounts()  -> 4
+
+    Kabir's account opened at 0.00 - the default argument.
+    Meera's opened at 1,000.00 without main.py naming the figure:
+    open_salary_account() is a class method that calls cls(...).
+
+==============================================================
+  2. deposit(), withdraw(), check_balance()
+==============================================================
+    before
+      Aarav Sharma    AC1001       25,000.00
+      Diya Menon      AC1002        8,400.50
+      Kabir Rao       AC1003            0.00
+      Meera Nair      AC1004        1,000.00
+
+    aarav.deposit(5000)      ->    30,000.00
+    aarav.withdraw(12000)    ->    18,000.00
+    diya.deposit(1599.50)    ->    10,000.00
+    kabir.deposit(3000)      ->     3,000.00
+    meera.withdraw(250)      ->       750.00
+
+    after
+      Aarav Sharma    AC1001       18,000.00
+      Diya Menon      AC1002       10,000.00
+      Kabir Rao       AC1003        3,000.00
+      Meera Nair      AC1004          750.00
+
+    Every call changed exactly one object. deposit() and withdraw()
+    return the new balance, so a caller never has to guess.
+
+==============================================================
+  3. The validation - you cannot take out what is not there
+==============================================================
+    Kabir's balance: 3,000.00
+
+    more than the balance           InsufficientFundsError
+                                      cannot withdraw 9,999.00 from a balance of 3,000.00 (short by 6,999.00)
+    exactly one rupee over          InsufficientFundsError
+                                      cannot withdraw 3,001.00 from a balance of 3,000.00 (short by 1.00)
+    a negative amount               InvalidAmountError
+                                      invalid amount -500.0: must not be negative
+    zero                            InvalidAmountError
+                                      invalid amount 0.0: must be greater than zero
+    a string                        InvalidAmountError
+                                      invalid amount '2000': must be a number
+    True                            InvalidAmountError
+                                      invalid amount True: must be a number
+    above the per-transaction limit InvalidAmountError
+                                      invalid amount 60000.0: above the per-transaction limit of 50,000.00
+
+    Kabir's balance is still 3,000.00 - a refused
+    withdrawal changes nothing. The check happens before the
+    subtraction, not after it.
+
+    And the boundary that is allowed:
+      kabir.withdraw(3000)   -> 0.00
+
+==============================================================
+  4. transfer_to() - two objects in one call
+==============================================================
+    before   Aarav    18,000.00   Diya    10,000.00
+    aarav.transfer_to(diya, 4000)
+    after    Aarav    14,000.00   Diya    14,000.00
+
+    A transfer that cannot be afforded moves nothing:
+      InsufficientFundsError: cannot withdraw 40,000.00 from a balance of 14,000.00 (short by 26,000.00)
+      balances before (14000.0, 14000.0)
+      balances after  (14000.0, 14000.0)
+
+    withdraw() runs first and raises, so deposit() is never reached.
+    Ordering the two calls the other way round would credit Diya
+    with money Aarav never had.
+
+==============================================================
+  5. display_account_details()
+==============================================================
+    Aarav Sharma  (AC1001)
+      bank      : Nova Bank
+      balance   :    14,000.00
+      movements : 4
+        OPEN        25,000.00   ->    25,000.00
+        DEPOSIT      5,000.00   ->    30,000.00
+        WITHDRAW    12,000.00   ->    18,000.00
+        WITHDRAW     4,000.00   ->    14,000.00
+
+    Diya Menon  (AC1002)
+      bank      : Nova Bank
+      balance   :    14,000.00
+      movements : 3
+        OPEN         8,400.50   ->     8,400.50
+        DEPOSIT      1,599.50   ->    10,000.00
+        DEPOSIT      4,000.00   ->    14,000.00
+
+    Each account keeps its own history list, built in __init__.
+    Aarav has 4 movements, Kabir has 4.
+
+==============================================================
+  6. The class variable and the class method
+==============================================================
+    BankAccount.bank_name  -> Nova Bank
+    Every account reads the same one:
+      Aarav Sharma    Nova Bank
+      Diya Menon      Nova Bank
+      Kabir Rao       Nova Bank
+
+    BankAccount.rename_bank('Nova Federal Bank')
+    BankAccount.bank_name  -> Nova Federal Bank
+
+      Aarav Sharma    Nova Federal Bank
+      Diya Menon      Nova Federal Bank
+      Kabir Rao       Nova Federal Bank
+
+    Four objects changed and not one of them was touched, because
+    the name was never copied into them. rename_bank() assigns to
+    cls.bank_name - the single shared copy.
+
+    The trap, for contrast:
+      meera.bank_name = 'Rogue Bank'
+      meera.bank_name        -> Rogue Bank
+      BankAccount.bank_name  -> Nova Federal Bank
+      aarav.bank_name        -> Nova Federal Bank
+    Assigning through the object made an instance variable that
+    hides the class variable - for that one account only.
+      del meera.bank_name    -> Nova Federal Bank  (the shared one is back)
+
+    BankAccount.total_accounts        -> 4
+    BankAccount.get_total_accounts()  -> 4
+
+==============================================================
+  4 accounts, one bank name, one counter.
+  Not one rupee left an account that did not have it.
+==============================================================
+

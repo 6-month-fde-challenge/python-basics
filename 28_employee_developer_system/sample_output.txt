@@ -1,0 +1,155 @@
+
+==============================================================
+  EXERCISE 28 - Employee and Developer
+  Parent class, child class, inheritance, super(), overriding
+==============================================================
+
+==============================================================
+  1. Two classes, five objects
+==============================================================
+      Employee('E101', 'Anita Desai', 68000.0, 'Finance')
+      Employee('E102', 'Vikram Shah', 74500.0, 'Operations')
+      Developer('E103', 'Rahul Verma', 92000.0, 'Engineering')
+      Developer('E104', 'Sneha Pillai', 81000.0, 'Engineering')
+      Developer('E105', 'Imran Qureshi', 110000.0, 'Engineering')
+
+    Employee.get_total_employees()  -> 5
+
+    Five, not two. Developer.__init__ calls super().__init__, and
+    the counter is incremented there - so a developer is counted
+    by code that was never written in Developer.
+
+==============================================================
+  2. What Developer got for free
+==============================================================
+    Developer defines: __init__, role(), display_details(),
+                       is_senior(), code(), _clean_experience()
+
+    Everything below is Employee's code, running on a Developer:
+
+      rahul.annual_salary()  -> 1,104,000.00
+      rahul.give_raise(8000) -> 100,000.00
+      rahul.company          -> Nova Systems
+      rahul.CURRENCY         -> INR
+      Employee.get_total_employees() from rahul -> 5
+
+    And the one thing only a Developer can do:
+      rahul.code('fix the import bug')
+        -> Rahul Verma is writing Python to fix the import bug
+
+      anita.code('anything') -> AttributeError: 'Employee' object has no attribute 'code'
+    Inheritance runs one way only.
+
+==============================================================
+  3. display_details() - overridden, not replaced
+==============================================================
+    Anita Desai  (E101)
+      role       : Employee
+      department : Finance
+      company    : Nova Systems
+      salary     : INR    68,000.00 / month
+      annual     : INR   816,000.00
+      bonus      : INR    40,800.00
+
+    Rahul Verma  (E103)
+      role       : Senior Developer
+      department : Engineering
+      company    : Nova Systems
+      salary     : INR   100,000.00 / month
+      annual     : INR 1,200,000.00
+      bonus      : INR    96,000.00
+      language   : Python
+      experience : 6 years
+      senior     : True
+
+    The first six lines of both blocks come from the same method.
+    Developer.display_details() is four lines long:
+
+        def display_details(self):
+            super().display_details()
+            print(... language ...)
+            print(... experience ...)
+            print(... senior ...)
+
+    Copying the parent's six prints instead would have worked today
+    and drifted out of step the first time Employee changed.
+
+==============================================================
+  4. Overriding role() and BONUS_RATE
+==============================================================
+    name            class       role()               bonus rate
+    -----------------------------------------------------------
+    Anita Desai     Employee    Employee                     5%
+    Vikram Shah     Employee    Employee                     5%
+    Rahul Verma     Developer   Senior Developer             8%
+    Sneha Pillai    Developer   Developer                    8%
+    Imran Qureshi   Developer   Senior Developer             8%
+
+    role() is defined twice - once in each class. Python looks at
+    the object's own class first:
+      Employee.__mro__   Employee -> object
+      Developer.__mro__  Developer -> Employee -> object
+
+    BONUS_RATE is a class variable defined in both classes, so the
+    same inherited bonus() method gives two different answers:
+
+      Anita Desai         816,000.00 x 5% =    40,800.00
+      Rahul Verma       1,200,000.00 x 8% =    96,000.00
+
+    bonus() was written once, in Employee, and never overridden.
+
+==============================================================
+  5. isinstance() - a Developer IS an Employee
+==============================================================
+    isinstance(rahul, Developer)  -> True
+    isinstance(rahul, Employee)   -> True
+    isinstance(anita, Developer)  -> False
+    type(rahul) is Employee       -> False
+    issubclass(Developer, Employee) -> True
+
+    Which is what lets one loop handle both kinds:
+
+      Anita Desai         816,000.00
+      Vikram Shah         894,000.00
+      Rahul Verma       1,200,000.00  [Python]
+      Sneha Pillai        972,000.00  [JavaScript]
+      Imran Qureshi     1,320,000.00  [Go]
+      ------------------------------
+      payroll           5,202,000.00
+
+    annual_salary() is called five times and exists once.
+
+==============================================================
+  6. One counter and one company, across two classes
+==============================================================
+    Employee.company   -> Nova Systems
+    Developer.company  -> Nova Systems   <- inherited, not copied
+
+    Employee.set_company('Nova Systems International')
+    Employee.company   -> Nova Systems International
+    Developer.company  -> Nova Systems International
+
+      Anita Desai     Nova Systems International
+      Vikram Shah     Nova Systems International
+      Rahul Verma     Nova Systems International
+
+    Employee.total_employees         -> 5
+    Developer.total_employees        -> 5
+    Employee.get_total_employees()   -> 5
+
+    There is one counter, held by Employee. Developer reads it
+    through inheritance, which is why the total is five and not
+    two plus three kept in two different places.
+
+    The validation both classes share:
+      salary is a string       ValueError: salary must be a number, got 'lots'
+      salary is zero           ValueError: salary must be greater than zero, got 0
+      experience is negative   ValueError: experience must not be negative, got -2
+
+    Developer never wrote the salary check. It inherited it.
+
+==============================================================
+  Developer is 47 lines long and behaves like a full Employee,
+  because the other 83 lines were written once, one class up.
+==============================================================
+

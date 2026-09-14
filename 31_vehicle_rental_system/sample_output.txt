@@ -1,0 +1,173 @@
+
+==============================================================
+  EXERCISE 31 - Vehicle Rental System
+  One parent, two children, and a shared static validator
+==============================================================
+
+==============================================================
+  1. is_valid_duration() - a static method, called first
+==============================================================
+    Vehicle.get_total_vehicles()  -> 0
+    No vehicle exists yet. The duration check does not need one:
+
+      Vehicle.is_valid_duration(1     ) -> True
+      Vehicle.is_valid_duration(3     ) -> True
+      Vehicle.is_valid_duration(7     ) -> True
+      Vehicle.is_valid_duration(90    ) -> True
+      Vehicle.is_valid_duration(0     ) -> False
+      Vehicle.is_valid_duration(-2    ) -> False
+      Vehicle.is_valid_duration(91    ) -> False
+      Vehicle.is_valid_duration(2.5   ) -> False
+      Vehicle.is_valid_duration(True  ) -> False
+      Vehicle.is_valid_duration('3'   ) -> False
+
+    The agency rents for 1 to 90 whole days. 2.5 is refused
+    because half a day is not a rental day, and True is refused
+    because bool subclasses int - a hire of True would otherwise
+    be a hire of one day.
+
+    All three classes share it. There is one rule about durations:
+      Car.is_valid_duration(7)   -> True
+      Bike.is_valid_duration(7)  -> True
+
+==============================================================
+  2. One parent, two children, four vehicles
+==============================================================
+    number       vehicle                   type                   per day
+    ---------------------------------------------------------------------
+    KA01AB1234   Maruti Swift              Car                   1,800.00
+    KA02XY7788   Toyota Innova             Large Car             3,200.00
+    KA05CD5678   Royal Enfield Classic 350 Bike                    700.00
+    KA09EF4321   Honda Activa              Bike                    350.00
+
+    Vehicle.get_total_vehicles()  -> 4
+
+    Four, from a counter that lives in Vehicle. Car and Bike both
+    call super().__init__, so neither had to know a counter exists.
+
+    Car and Bike are siblings. Neither imports, mentions or inherits
+    from the other:
+      issubclass(Car, Vehicle)  -> True
+      issubclass(Bike, Vehicle) -> True
+      issubclass(Car, Bike)     -> False
+
+==============================================================
+  3. calculate_rent(days) - defined three times, shared once
+==============================================================
+    Weekly discount: 10% from 7 days, written once in Vehicle
+    Car adds insurance of 250.00 per day
+    Bike adds a helmet charge of 100.00, once
+
+    vehicle                         1 day     3 days     7 days    14 days
+    ----------------------------------------------------------------------
+    Maruti Swift                 2,050.00   6,150.00  13,090.00  26,180.00
+    Toyota Innova                3,450.00  10,350.00  21,910.00  43,820.00
+    Royal Enfield Classic 350      800.00   2,200.00   4,510.00   8,920.00
+    Honda Activa                   450.00   1,150.00   2,305.00   4,510.00
+
+    Where a 7-day Swift hire comes from:
+      super().calculate_rent(7)  =  11,340.00   (7 x 1,800.00, less 10%)
+      + insurance 7 x 250.00   =   1,750.00
+      ----------------------------------------
+      swift.calculate_rent(7)    =  13,090.00
+
+    And a 7-day Classic hire:
+      super().calculate_rent(7)  =   4,410.00
+      + helmet, once             =     100.00
+      ----------------------------------------
+      classic.calculate_rent(7)  =   4,510.00
+
+    Neither child re-implemented the weekly discount. Change it in
+    Vehicle and all four rows above move together.
+
+==============================================================
+  4. Renting the fleet out
+==============================================================
+      KA01AB1234  Maruti Swift                  4 days     8,200.00
+      KA05CD5678  Royal Enfield Classic 350    10 days     6,400.00
+      KA09EF4321  Honda Activa                  2 days       800.00
+      KA02XY7788  Toyota Innova                 7 days    21,910.00
+      ------------------------------------------------------------
+      takings                                        37,310.00
+
+    Nothing can be hired out twice:
+      swift.rent_out(2) -> ValueError: KA01AB1234 is already out on hire
+
+      swift.return_vehicle() -> True
+      swift.rent_out(2)      -> 4,100.00
+      swift.days_hired       -> 6
+
+==============================================================
+  5. What the agency refuses
+==============================================================
+      zero days                  ValueError: rental duration must be a whole number of days between 1 and 90, got 0
+      negative days              ValueError: rental duration must be a whole number of days between 1 and 90, got -3
+      half a day                 ValueError: rental duration must be a whole number of days between 1 and 90, got 2.5
+      a string                   ValueError: rental duration must be a whole number of days between 1 and 90, got '7'
+      True                       ValueError: rental duration must be a whole number of days between 1 and 90, got True
+      longer than the maximum    ValueError: rental duration must be a whole number of days between 1 and 90, got 120
+      a car with 1 seat          ValueError: seats must be between 2 and 9, got 1
+      a bike with 30cc           ValueError: engine capacity must be between 50cc and 2000cc, got 30
+      a rent of zero             ValueError: rent per day must be above zero, got 0
+
+    Vehicle.get_total_vehicles()  -> 4   (still 4)
+    Car and Bike check their own argument before calling
+    super().__init__, so a vehicle that is refused is never counted.
+
+    And the boundaries that are allowed:
+      swift.calculate_rent(1)   ->   2,050.00
+      swift.calculate_rent(90)  -> 168,300.00
+
+==============================================================
+  6. display_details(), and what the three classes share
+==============================================================
+    Toyota Innova  (KA02XY7788)
+      type       : Large Car
+      agency     : Nova Rentals
+      per day    : INR  3,200.00
+      3 days     : INR 10,350.00
+      7 days     : INR 21,910.00   (weekly rate)
+      status     : out on hire
+      days hired : 7
+      seats      : 7
+      insurance  : INR    250.00 / day
+
+    Royal Enfield Classic 350  (KA05CD5678)
+      type       : Bike
+      agency     : Nova Rentals
+      per day    : INR    700.00
+      3 days     : INR  2,200.00
+      7 days     : INR  4,510.00   (weekly rate)
+      status     : out on hire
+      days hired : 10
+      engine     : 349 cc
+      helmet     : INR    100.00 once
+
+    The first seven lines of both blocks are Vehicle's method.
+    Car adds two, Bike adds two, and neither repeats the seven.
+
+    Vehicle.agency  -> Nova Rentals
+    Vehicle.set_agency('Nova Rentals India')
+      Vehicle.agency -> Nova Rentals India
+      Car.agency     -> Nova Rentals India
+      Bike.agency    -> Nova Rentals India
+
+      KA01AB1234   Nova Rentals India
+      KA02XY7788   Nova Rentals India
+      KA05CD5678   Nova Rentals India
+
+    One loop over the whole fleet, whatever is in it:
+
+      Car                 Maruti Swift                6 days
+      Large Car           Toyota Innova               7 days
+      Bike                Royal Enfield Classic 350  10 days
+      Bike                Honda Activa                2 days
+      ----------------------------------------------------
+      total days hired                               25
+      busiest                                       Classic 350
+
+==============================================================
+  calculate_rent() exists three times and the weekly discount once.
+  Car and Bike never mention each other.
+==============================================================
+

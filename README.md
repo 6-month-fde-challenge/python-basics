@@ -1,9 +1,10 @@
 # Python Basics
 
-Twenty-four practical Python exercises covering the language fundamentals — data
-types, sequences, loops, functions, and then the three things that turn a script into
-an application: logging, exception handling, and packages. Each lives in its own
-folder with a README explaining what it covers.
+Thirty-two practical Python exercises covering the language fundamentals — data
+types, sequences, loops, functions, then the three things that turn a script into
+an application (logging, exception handling, packages), and finally
+object-oriented programming. Each lives in its own folder with a README explaining
+what it covers.
 
 Every program is self-contained and runs on its own:
 
@@ -62,7 +63,7 @@ Multi-program sets. Each has its own README with per-question notes.
 |---|--------|-------|
 | 21 | [21_combined_final_project](21_combined_final_project/) | 12 mini-applications combining everything above |
 
-## Part 5 - Logging, exceptions and packages (exercises 22-24)
+## Part 5 - Logging, exceptions and packages (exercises 22-25)
 
 Where the exercises stop being scripts and start being applications. Each is a
 multi-module program that writes to a log file and survives its own failures.
@@ -78,25 +79,44 @@ Read in order - they build on each other. 22 introduces logging, 23 reuses the l
 configuration and adds custom exception classes, 24 turns loose modules into a package,
 and 25 points a package at the filesystem, where a mistake is irreversible.
 
-Exercises 22 and 23 each open with a **`00_concepts.py`** - a standalone, runnable file
-that demonstrates every idea the application relies on before you read the application
-itself:
+## Part 6 - Object-oriented programming (exercises 26-32)
+
+Where the data and the code that understands it stop being separate things. Each is a
+small application built from classes, and each isolates one idea before the last one
+puts them together.
+
+| # | Folder | Topic |
+|---|--------|-------|
+| 26 | [26_student_management_system](26_student_management_system/) | Class, object, `__init__`, `self`, class variable, class method |
+| 27 | [27_bank_account_system](27_bank_account_system/) | Class variables and class methods - one bank name, one counter |
+| 28 | [28_employee_developer_system](28_employee_developer_system/) | Inheritance: parent, child, `super()`, overriding, `isinstance` |
+| 29 | [29_ecommerce_product_system](29_ecommerce_product_system/) | `@staticmethod`, and choosing between the three kinds of method |
+| 30 | [30_course_platform_system](30_course_platform_system/) | Method overriding done properly - `super()` as a value, not a formality |
+| 31 | [31_vehicle_rental_system](31_vehicle_rental_system/) | One parent, two children, and siblings that ignore each other |
+| 32 | [32_learning_platform](32_learning_platform/) | Everything above, plus composition, in a package |
+
+Exercises 22, 23, 26 and 28 each open with a **`00_concepts.py`** - a standalone,
+runnable file that demonstrates every idea the application relies on before you read
+the application itself:
 
 ```bash
 python 22_application_activity_logger/00_concepts.py   # logging + file handling
 python 23_student_result_processor/00_concepts.py      # exception handling
+python 26_student_management_system/00_concepts.py     # classes and objects
+python 28_employee_developer_system/00_concepts.py     # inheritance
 ```
 
-Neither imports the application. Both print real output rather than describing it.
+None of them imports its application. All four print real output rather than
+describing it.
 
 ---
 
 ## A note on the numbering
 
-Folder numbers are the **learning order**: reading them 01 through 24, top to bottom,
+Folder numbers are the **learning order**: reading them 01 through 32, top to bottom,
 gives the sensible sequence. Data types and data structures first, then loops, then
 functions, then the combined project that uses all of them, then logging, exceptions
-and packages.
+and packages, then object-oriented programming.
 
 Numbering continues into [module 02](../02_vibe_coding_basic/) rather than restarting,
 so the folder number, the exercise number and the video part number stay the same thing
@@ -131,9 +151,16 @@ clauses doing distinct work, specific exceptions before general ones, custom exc
 classes with a shared base, subclassing a subclass, `raise ... from`, and putting the
 `try` inside the loop so one bad record costs one record
 
-**Modules and packages** (22-24) - one job per file, `main.py` holding no logic,
+**Modules and packages** (22-24, 32) - one job per file, `main.py` holding no logic,
 `__init__.py`, relative imports, `__all__`, dependency order as import order, and
 `if __name__ == "__main__"` for module self-tests
+
+**Object-oriented programming** (26-32) - `class` and object, `__init__` and `self`,
+instance methods, class variables and the `self.x += 1` shadowing trap, `@classmethod`
+and `cls`, second constructors that return `cls(...)`, `@staticmethod` and when a method
+needs neither, inheritance and `super()`, overriding methods *and* overriding data,
+the MRO, `isinstance` versus `type`, one parent with two children, composition
+alongside inheritance, and per-object mutable state built inside `__init__`
 
 **Practice** - input validation with `try/except`, guarding edge cases (empty lists,
 zero divisors, `0!`, the number 1 in a prime test), menu-driven applications, and

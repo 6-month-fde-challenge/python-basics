@@ -1,0 +1,162 @@
+
+==============================================================
+  EXERCISE 29 - E-Commerce Product System
+  Static methods, stock updates, and pricing an order
+==============================================================
+
+==============================================================
+  1. A static method needs no object
+==============================================================
+    Product.get_total_products()  -> 0
+    There is not a single product yet - and this still works:
+
+      Product.is_valid_price(1299      ) -> True
+      Product.is_valid_price(58990.5   ) -> True
+      Product.is_valid_price(0         ) -> False
+      Product.is_valid_price(-250      ) -> False
+      Product.is_valid_price('999'     ) -> False
+      Product.is_valid_price(True      ) -> False
+      Product.is_valid_price(None      ) -> False
+
+    is_valid_price() reads no attribute of any product. It takes a
+    number and answers a question about that number, so it takes
+    neither self nor cls:
+
+        @staticmethod
+        def is_valid_price(price):
+            return price > 0
+
+    True is rejected first. bool subclasses int, so True > 0 is
+    True and a price of True would be stored as 1.00.
+
+==============================================================
+  2. Five products
+==============================================================
+    id     name            category            price   stock
+    --------------------------------------------------------
+    P101   Laptop          Electronics     58,990.00      12
+    P102   Coffee Mug      Home               349.00      60
+    P103   Notebook        Stationery         120.50       4
+    P104   Olive Oil 1L    Grocery            899.00      25
+    P105   Running Shoes   Fashion          4,250.00       8
+
+    Product.get_total_products()  -> 5
+    Product.store_name            -> Nova Cart
+
+==============================================================
+  3. calculate_total_price(quantity)
+==============================================================
+    Laptop at 58,990.00, GST 18%
+
+    qty         subtotal      with GST
+    ----------------------------------
+    1          58,990.00     69,608.20
+    2         117,980.00    139,216.40
+    5         294,950.00    348,041.00
+
+    include_tax defaults to True, so the common call is the short
+    one and the exception is spelled out - the default-argument
+    rule from exercise 19.
+
+    A quantity that is not a quantity:
+      calculate_total_price(0     ) -> ValueError: quantity must be a whole number above zero, got 0
+      calculate_total_price(-3    ) -> ValueError: quantity must be a whole number above zero, got -3
+      calculate_total_price(2.5   ) -> ValueError: quantity must be a whole number above zero, got 2.5
+      calculate_total_price('two' ) -> ValueError: quantity must be a whole number above zero, got 'two'
+
+==============================================================
+  4. Buying - update_stock() through sell()
+==============================================================
+    before
+    id     name            category            price   stock
+    --------------------------------------------------------
+    P101   Laptop          Electronics     58,990.00      12
+    P102   Coffee Mug      Home               349.00      60
+    P103   Notebook        Stationery         120.50       4
+    P104   Olive Oil 1L    Grocery            899.00      25
+    P105   Running Shoes   Fashion          4,250.00       8
+
+      sell  2 x Laptop             139,216.40   10 left
+      sell 10 x Coffee Mug           4,118.20   50 left
+      sell  1 x Running Shoes        5,015.00   7 left
+      sell  3 x Olive Oil 1L         3,182.46   22 left
+      sell  2 x Notebook               284.38   2 left
+      -----------------------------------------------
+      order total              151,816.44
+
+    after
+    id     name            category            price   stock
+    --------------------------------------------------------
+    P101   Laptop          Electronics     58,990.00      10
+    P102   Coffee Mug      Home               349.00      50
+    P103   Notebook        Stationery         120.50       2
+    P104   Olive Oil 1L    Grocery            899.00      22
+    P105   Running Shoes   Fashion          4,250.00       7
+
+    Stock went down by exactly what was sold, and units_sold went
+    up by the same amount - both inside sell().
+
+==============================================================
+  5. What the shop refuses
+==============================================================
+    Notebook: 2 in stock
+      more than the shelf holds    ValueError: cannot remove 5 of Notebook: only 2 in stock
+      a negative quantity          ValueError: quantity must be a whole number above zero, got -2
+      half a notebook              ValueError: quantity must be a whole number above zero, got 1.5
+      a stock change of zero       ValueError: stock change of 0 does nothing
+      removing more than exists    ValueError: cannot remove 99 of Notebook: only 2 in stock
+      a 100% discount              ValueError: discount must be between 0 and 100, got 100
+      a price of zero at build time ValueError: price must be greater than zero, got 0
+      an unknown category          ValueError: unknown category 'Hardware' (known: Electronics, Home, Grocery, Fashion, Stationery)
+
+    Notebook is still at 2 - a refused sale
+    changes nothing, because sell() prices the order and checks the
+    stock before it touches either number.
+
+    And the boundary that is allowed:
+      notebook.sell(2) -> 284.38   stock now 0
+      notebook.in_stock()  -> False
+
+==============================================================
+  6. Restocking, discounts and display_product()
+==============================================================
+    notebook.restock(50)  -> 50 in stock
+    shoes.apply_discount(15) -> price 3,612.50
+
+    Laptop  (P101)
+      category   : Electronics
+      price      : INR  58,990.00
+      with GST   : INR  69,608.20
+      stock      : 10 in stock
+      sold       : 2
+      shelf value: INR 589,900.00
+
+    Notebook  (P103)
+      category   : Stationery
+      price      : INR     120.50
+      with GST   : INR     142.19
+      stock      : 50 in stock
+      sold       : 4
+      shelf value: INR   6,025.00
+
+    Running Shoes  (P105)
+      category   : Fashion
+      price      : INR   3,612.50
+      with GST   : INR   4,262.75
+      stock      : 7 in stock
+      sold       : 1
+      shelf value: INR  25,287.50
+
+    total shelf value       INR   658,440.50
+    best seller             Coffee Mug (10 units)
+    low stock               none
+
+    Product.set_store_name('Nova Cart India')
+      Product.store_name   -> Nova Cart India
+      laptop.store_name    -> Nova Cart India
+
+==============================================================
+  5 products exist. Two more were refused before they did,
+  because is_valid_price() runs in __init__ - before the object is.
+==============================================================
+

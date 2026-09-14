@@ -1,0 +1,166 @@
+
+==============================================================
+  EXERCISE 30 - Course and PremiumCourse
+  Method overriding, super(), and a counter across two classes
+==============================================================
+
+==============================================================
+  1. Two classes, six courses
+==============================================================
+    Course.get_course_count()  -> 0
+
+    course                  type             weeks      price        pay
+    --------------------------------------------------------------------
+    Python Basics           Course               6   4,999.00   4,499.10
+    SQL Foundations         Course               4   3,499.00   3,149.10
+    Data Structures         Course              10   6,999.00   5,949.15
+    Git and GitHub          Course               2   1,499.00   1,349.10
+    Python Pro              Premium Course      12  14,999.00   9,299.38
+    Analytics Career Track  Premium Course      16  24,999.00  14,499.42
+
+    Course.get_course_count()  -> 6
+
+    Six, not four. PremiumCourse.__init__ calls super().__init__,
+    and the counter lives there - so the class method that counts
+    courses never had to learn that premium courses exist.
+
+==============================================================
+  2. calculate_discount() - overridden, then extended
+==============================================================
+    Course.calculate_discount():
+      base 10%, plus 5% for 8 weeks or more
+
+    PremiumCourse.calculate_discount():
+      super().calculate_discount(), plus 5% for a mentor
+      and 0.5% per live session, capped at 60%
+
+    course                   weeks   base   total       saves
+    ---------------------------------------------------------
+    Python Basics                6    10%     10%      499.90
+    SQL Foundations              4    10%     10%      349.90
+    Data Structures             10    10%     15%    1,049.85
+    Git and GitHub               2    10%     10%      149.90
+    Python Pro                  12    20%   38.0%    5,699.62
+    Analytics Career Track      16    20%   42.0%   10,499.58
+
+    BASE_DISCOUNT is a class variable defined in both classes, so
+    the same super() call returns a different number depending on
+    which class the object belongs to:
+
+      Course.BASE_DISCOUNT         -> 10
+      PremiumCourse.BASE_DISCOUNT  -> 20
+
+==============================================================
+  3. What super() actually returned
+==============================================================
+    Python Pro: 12 weeks, mentor True, 16 live sessions
+
+      super().calculate_discount()   =    25%   (base 20 + long-course 5)
+      + mentor                       =     5%
+      + 16 live sessions x 0.5%      =   8.0%
+      --------------------------------------------
+      pro.calculate_discount()       =  38.0%
+
+    PremiumCourse did not re-implement the long-course bonus. It
+    asked the parent for a number and added to it, so a change to
+    the platform-wide rule reaches premium courses for free.
+
+    The cap is real, not decorative:
+      before  Python Pro: 38.0%
+      pro.add_live_sessions(60)
+      after   Python Pro: 60%   (capped at 60%)
+
+==============================================================
+  4. show_course_details() - nine lines, then twelve
+==============================================================
+    Python Basics
+      type       : Course
+      instructor : V. Krishnan
+      platform   : Nova Learn
+      duration   : 6 weeks
+      price      : INR   4,999.00
+      discount   : 10%   (-INR 499.90)
+      you pay    : INR   4,499.10
+      per week   : INR     749.85
+      enrolled   : 0
+
+    Analytics Career Track
+      type       : Premium Course
+      instructor : R. Banerjee
+      platform   : Nova Learn
+      duration   : 16 weeks
+      price      : INR  24,999.00
+      discount   : 42.0%   (-INR 10,499.58)
+      you pay    : INR  14,499.42
+      per week   : INR     906.21
+      enrolled   : 0
+      mentor     : included
+      live        : 24 sessions
+      per session: INR     604.14
+
+    The first nine lines of both blocks are the same method.
+    PremiumCourse.show_course_details() is four lines long:
+
+        def show_course_details(self):
+            super().show_course_details()
+            print(... mentor ...)
+            print(... live ...)
+            print(... per session ...)
+
+==============================================================
+  5. One loop over both classes
+==============================================================
+    course                   enrolled        pay       revenue
+    ----------------------------------------------------------
+    Python Basics                 180   4,499.10    809,838.00
+    SQL Foundations               180   3,149.10    566,838.00
+    Data Structures               180   5,949.15  1,070,847.00
+    Git and GitHub                180   1,349.10    242,838.00
+    Python Pro                     40   5,999.60    239,984.00
+    Analytics Career Track         40  14,499.42    579,976.80
+    ----------------------------------------------------------
+    total                                         3,510,321.80
+    top earner              Data Structures
+
+    revenue(), final_price() and enrol() are written once, in
+    Course, and run on both classes. isinstance() appears once, to
+    choose a different number of learners for a premium course.
+
+==============================================================
+  6. The class variable and the class method
+==============================================================
+    Course.platform         -> Nova Learn
+    PremiumCourse.platform  -> Nova Learn   <- inherited, not copied
+
+    Course.set_platform('Nova Learn Academy')
+    Course.platform         -> Nova Learn Academy
+    PremiumCourse.platform  -> Nova Learn Academy
+
+      Python Basics           Nova Learn Academy
+      Python Pro              Nova Learn Academy
+
+    Course.total_courses          -> 6
+    PremiumCourse.total_courses   -> 6
+    Course.get_course_count()     -> 6
+    PremiumCourse.get_course_count() -> 6
+
+    One counter, held by Course, read through inheritance by both.
+
+    The validation both classes share, and the one only the child has:
+      price of zero            ValueError: price must be greater than zero, got 0
+      duration of 0 weeks      ValueError: duration must be at least 1 week, got 0
+      duration 2.5 weeks       ValueError: duration must be a whole number of weeks, got 2.5
+      live_sessions = -3       ValueError: live_sessions must not be negative, got -3
+      mentor_support = 'yes'   ValueError: mentor_support must be True or False, got 'yes'
+
+    PremiumCourse never wrote the price or duration check - it
+    inherited both. The two checks it did write run BEFORE
+    super().__init__, so a course that is about to be refused is
+    not counted on its way out:
+      Course.get_course_count()  -> 6   (still 6, after 5 refusals)
+
+==============================================================
+  calculate_discount() is defined twice and duplicated nowhere:
+  the child asks the parent for a number and adds to it.
+==============================================================
+

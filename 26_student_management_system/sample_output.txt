@@ -1,0 +1,150 @@
+
+==============================================================
+  EXERCISE 26 - Student Management System
+  Classes, objects, __init__, instance methods, class members
+==============================================================
+
+==============================================================
+  1. One class, five objects
+==============================================================
+    Student.get_total_students()  -> 0
+    (the class exists, no student does)
+
+    Student.get_total_students()  -> 5
+
+      Student('Aarav Sharma', 'S101', 'Python')
+      Student('Diya Menon', 'S102', 'Data Science')
+      Student('Kabir Rao', 'S103', 'Python')
+      Student('Meera Nair', 'S104', 'Web Development')
+      Student('Rohan Iyer', 'S105', 'Data Science')
+
+    Five objects. Each has its own name, email, id, course and
+    marks; all five share Student.institute and the counter.
+
+==============================================================
+  2. display_details() - an instance method
+==============================================================
+    Aarav Sharma  (S101)
+      email    : aarav@example.com
+      course   : Python
+      Python          88
+      Maths           92
+      English         76
+      average  : 85.33   grade A
+      best     : Maths (92)
+      result   : PASS
+
+    Diya Menon  (S102)
+      email    : diya@example.com
+      course   : Data Science
+      Python          95
+      Statistics      89
+      English         81
+      average  : 88.33   grade A
+      best     : Python (95)
+      result   : PASS
+
+    Kabir Rao  (S103)
+      email    : kabir@example.com
+      course   : Python
+      Python          64
+      Maths           58
+      English         71
+      average  : 64.33   grade C
+      best     : English (71)
+      result   : PASS
+
+    Meera Nair  (S104)
+      email    : meera@example.com
+      course   : Web Development
+      HTML            84
+      CSS             79
+      JavaScript      33   <- below pass mark
+      average  : 65.33   grade C
+      best     : HTML (84)
+      result   : FAIL
+
+    Rohan Iyer  (S105)
+      email    : rohan@example.com
+      course   : Data Science
+      marks    : none recorded yet
+
+    Rohan has no marks yet, so his average is 0.00 and his
+    result is FAIL rather than a crash on an empty dictionary.
+
+==============================================================
+  3. update_marks() - changing one object
+==============================================================
+    before: Meera JavaScript = 33   average 65.33  grade C  FAIL
+    meera.update_marks('JavaScript', 68)   (was 33)
+    after : Meera JavaScript = 68   average 77.00  grade B  PASS
+
+    A new subject for a student who had none:
+    rohan.marks           -> {'Python': 77, 'Statistics': 69}
+    rohan.average_marks() -> 73.0
+
+    Updating Meera changed Meera. Nobody else moved:
+      Aarav Sharma   average  85.33
+      Diya Menon     average  88.33
+
+==============================================================
+  4. average_marks() across every object
+==============================================================
+    student       course              average  grade   result
+    ---------------------------------------------------------
+    Aarav Sharma  Python                85.33      A     PASS
+    Diya Menon    Data Science          88.33      A     PASS
+    Kabir Rao     Python                64.33      C     PASS
+    Meera Nair    Web Development       77.00      B     PASS
+    Rohan Iyer    Data Science          73.00      B     PASS
+    ---------------------------------------------------------
+    class average                       77.60
+    top student                     Diya Menon
+
+==============================================================
+  5. The class variable and the class method
+==============================================================
+    Student.total_students        -> 5
+    Student.get_total_students()  -> 5
+
+    Every student agrees, because there is only one counter:
+      Aarav Sharma   sees 5
+      Diya Menon     sees 5
+      Kabir Rao      sees 5
+
+    Student.institute             -> Nova Institute of Technology
+    Student.set_institute('Nova Institute of Engineering')
+    Student.institute             -> Nova Institute of Engineering
+
+    One call, and every student's institute changed - none of
+    the five objects was touched:
+      Aarav Sharma   Nova Institute of Engineering
+      Diya Menon     Nova Institute of Engineering
+      Kabir Rao      Nova Institute of Engineering
+
+==============================================================
+  6. Validation - what the class refuses
+==============================================================
+    mark above 100     ValueError: score for 'Python' must be between 0 and 100, got 120
+    negative mark      ValueError: score for 'Python' must be between 0 and 100, got -5
+    mark is a string   ValueError: score for 'Python' must be a number, got 'eighty'
+    mark is True       ValueError: score for 'Python' must be a number, got True
+    empty subject      ValueError: subject must be a non-empty string
+
+    True is rejected on purpose. bool subclasses int in Python, so
+    isinstance(True, int) is True and a score of True would become
+    1 - a silently wrong mark instead of a loud error.
+
+    is_valid_email() is a static method: it needs no student.
+      Student.is_valid_email('aarav@example.com'   ) -> True
+      Student.is_valid_email('no-at-sign'          ) -> False
+      Student.is_valid_email('two@@example.com'    ) -> False
+      Student.is_valid_email('nodot@example'       ) -> False
+      Student.is_valid_email('@example.com'        ) -> False
+
+==============================================================
+  Student.get_total_students() -> 6
+  Six, not five: section 6 built one more student to break.
+  The counter cannot be fooled - it lives in __init__.
+==============================================================
+
